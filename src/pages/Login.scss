@@ -1,0 +1,28 @@
+ion-button {
+  width: 56px;
+  height: 56px;
+  margin: 0 12px;
+  --border-radius: 50%;
+  --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+}
+
+.kakao-btn {
+  --background: #fee500;
+  --background-hover: #fff176;
+  --background-activated: #fff176;
+  --background-focused: #fee500;
+}
+
+.google-btn {
+  --background: #fff;
+  --background-hover: #f4f7f8;
+  --background-activated: #f4f7f8;
+  --background-focused: #fff;
+}
+
+.apple-btn {
+  --background: #fff;
+  --background-hover: #ededed;
+  --background-activated: #ededed;
+  --background-focused: #fff;
+}
