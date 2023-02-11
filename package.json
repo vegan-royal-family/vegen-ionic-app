@@ -3,9 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "4.6.3",
     "@capacitor/app": "4.1.1",
     "@capacitor/core": "4.6.3",
+    "@capacitor/geolocation": "^4.1.0",
     "@capacitor/haptics": "4.1.0",
+    "@capacitor/ios": "4.6.3",
     "@capacitor/keyboard": "4.1.1",
     "@capacitor/status-bar": "4.1.1",
     "@emotion/css": "^11.10.5",
