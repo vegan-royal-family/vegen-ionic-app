@@ -1,10 +1,8 @@
+import "./style.scss";
 import { IonPage, IonContent, IonText, IonButton } from "@ionic/react";
 import styled from "@emotion/styled";
-import theme from "../styles/theme";
-import "./Login.scss";
-import { ReactComponent as KakaoIcon } from "../assets/icons/kakao.svg";
-import { ReactComponent as GoogleIcon } from "../assets/icons/google.svg";
-import { ReactComponent as AppleIcon } from "../assets/icons/apple.svg";
+import Icon from "components/common/Icon";
+import theme from "styles/theme";
 
 const ImageBox = styled.div`
   margin: 75px 0 12px;
@@ -39,13 +37,13 @@ const Login: React.FC = () => {
           </IonText>
           <div className="btn-group">
             <IonButton className="kakao-btn">
-              <KakaoIcon />
+              <Icon icon="kakao" />
             </IonButton>
             <IonButton className="google-btn">
-              <GoogleIcon />
+              <Icon icon="google" />
             </IonButton>
             <IonButton className="apple-btn">
-              <AppleIcon />
+              <Icon icon="apple" />
             </IonButton>
           </div>
         </ContentWrapper>
