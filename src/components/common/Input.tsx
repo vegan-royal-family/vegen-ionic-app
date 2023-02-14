@@ -1,11 +1,4 @@
-import {
-  ChangeEvent,
-  ReactElement,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import { ChangeEvent, ReactElement, useEffect, useRef, useState } from "react";
 import styled from "@emotion/styled";
 import theme from "styles/theme";
 import Icon from "./Icon";
@@ -79,6 +72,7 @@ export default function Input({
     inputClassName += " focused-input";
   }
 
+  // TODO: focus가 잡힐 때도 있고 안 잡힐 때도 있음. 문제 해결 필요
   useEffect(() => {
     if (focusMode && inputRef.current) {
       inputRef.current.focus();
