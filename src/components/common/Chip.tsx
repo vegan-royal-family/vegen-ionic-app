@@ -35,7 +35,7 @@ const SIZES = {
     --chip-padding: 2px 8px;
   `,
   md: css`
-    --chip-padding: 8px 12px;
+    --chip-padding: 6px 12px;
   `,
 };
 

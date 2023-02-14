@@ -1,6 +1,14 @@
-import { ChangeEvent, ReactElement } from "react";
+import {
+  ChangeEvent,
+  ReactElement,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import styled from "@emotion/styled";
 import theme from "styles/theme";
+import Icon from "./Icon";
 
 type InputPropsType = {
   id?: string;
@@ -14,9 +22,38 @@ type InputPropsType = {
   disabled?: boolean;
   readOnly?: boolean;
   helpText?: string;
+  prefixIcon?: string;
+  suffixIcon?: string;
+  onPrefixIconClick?: Function;
+  onSuffixIconClick?: Function;
+  focusMode?: boolean;
+};
+
+const IconButton = ({
+  icon,
+  onClick,
+  type,
+}: {
+  icon: string;
+  onClick: Function;
+  type: "prefix" | "suffix";
+}) => {
+  const style = {
+    paddingRight: "0px",
+    paddingLeft: "0px",
+  };
+  if (type === "prefix") {
+    style.paddingRight = "8px";
+  }
+  return (
+    <StyledIconButton onClick={() => onClick()} style={style}>
+      <Icon icon={icon} size="sm" />
+    </StyledIconButton>
+  );
 };
 
 export default function Input({
+  className,
   value,
   placeholder = "필드를 입력해주세요.",
   width,
@@ -24,19 +61,65 @@ export default function Input({
   label,
   helpText,
   disabled = false,
+  prefixIcon,
+  onPrefixIconClick,
+  suffixIcon,
+  onSuffixIconClick,
+  focusMode,
   ...props
 }: InputPropsType): ReactElement {
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [isFocused, setIsFocused] = useState(focusMode);
+
+  let inputClassName = `${className ?? ""}`;
+  if (disabled) {
+    inputClassName += " disabled-input";
+  }
+  if (isFocused) {
+    inputClassName += " focused-input";
+  }
+
+  useEffect(() => {
+    if (focusMode && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [inputRef, focusMode]);
+
   return (
     <LabelField disabled={disabled}>
       {label && <div className="label">{label}</div>}
-      <StyledInput
-        type="text"
-        placeholder={placeholder}
-        value={value}
-        style={{ width, height }}
-        disabled={disabled}
-        {...props}
-      />
+      <InputWrapper className={inputClassName} style={{ width, height }}>
+        {prefixIcon &&
+          (onPrefixIconClick ? (
+            <IconButton
+              type="prefix"
+              icon={prefixIcon}
+              onClick={onPrefixIconClick}
+            />
+          ) : (
+            <Icon icon={prefixIcon} size="sm" />
+          ))}
+        <StyledInput
+          id="search-input"
+          ref={inputRef}
+          type="text"
+          placeholder={placeholder}
+          value={value}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
+          {...props}
+        />
+        {suffixIcon &&
+          (onSuffixIconClick ? (
+            <IconButton
+              type="suffix"
+              icon={suffixIcon}
+              onClick={onSuffixIconClick}
+            />
+          ) : (
+            <Icon icon={suffixIcon} size="sm" />
+          ))}
+      </InputWrapper>
       {helpText && <div className="helpText">{helpText}</div>}
     </LabelField>
   );
@@ -62,6 +145,24 @@ export const LabelField = styled.div<{ disabled: boolean }>`
         ? theme.palette.colors.gray[300]
         : theme.palette.colors.gray[500]};
   }
+
+  .focused-input {
+    border: 1px solid ${theme.palette.colors.gray[500]};
+  }
+  .disabled-input {
+    background-color: ${theme.palette.colors.gray[50]};
+    border: 1px solid ${theme.palette.colors.gray[200]};
+    color: ${theme.palette.colors.gray[400]};
+  }
+`;
+
+const InputWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid ${theme.palette.colors.gray[300]};
+  border-radius: 5px;
+  background-color: #fff;
 `;
 
 const StyledInput = styled.input`
@@ -74,23 +175,19 @@ const StyledInput = styled.input`
 
   display: flex;
   align-items: center;
-  padding: 10px 16px;
-  border: 1px solid ${theme.palette.colors.gray[300]};
-  border-radius: 5px;
   color: ${theme.palette.colors.basic.black};
   box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
+  width: 100%;
 
   ::placeholder {
     color: ${theme.palette.colors.gray[400]};
   }
-  &:focus {
-    border: 1px solid ${theme.palette.colors.gray[500]};
-    outline: none;
-  }
+`;
 
-  :disabled {
-    background-color: ${theme.palette.colors.gray[50]};
-    border: 1px solid ${theme.palette.colors.gray[200]};
-    color: ${theme.palette.colors.gray[400]};
-  }
+const StyledIconButton = styled.button`
+  background-color: transparent;
 `;

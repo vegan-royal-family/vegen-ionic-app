@@ -6,7 +6,7 @@ const BottomModal = () => {
 
   return (
     <IonModal
-      id="ion-user-modal"
+      id="main-bottom-modal"
       ref={modalRef}
       isOpen={true}
       initialBreakpoint={0.15}

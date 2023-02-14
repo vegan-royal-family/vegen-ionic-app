@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
-import { ReactComponent as Apple } from "assets/icons/apple.svg";
-import { ReactComponent as Google } from "assets/icons/google.svg";
-import { ReactComponent as Kakao } from "assets/icons/kakao.svg";
-import { ReactComponent as Aiming } from "assets/icons/aiming.svg";
-import { ReactComponent as Plus } from "assets/icons/plus.svg";
-import { ReactComponent as Left } from "assets/icons/left.svg";
-import { ReactComponent as Right } from "assets/icons/right.svg";
-import { ReactComponent as Down } from "assets/icons/down.svg";
-import { ReactComponent as Search } from "assets/icons/search.svg";
+import { ReactComponent as Apple } from "assets/icon/apple.svg";
+import { ReactComponent as Google } from "assets/icon/google.svg";
+import { ReactComponent as Kakao } from "assets/icon/kakao.svg";
+import { ReactComponent as Aiming } from "assets/icon/aiming.svg";
+import { ReactComponent as Plus } from "assets/icon/plus.svg";
+import { ReactComponent as Left } from "assets/icon/left.svg";
+import { ReactComponent as Right } from "assets/icon/right.svg";
+import { ReactComponent as Down } from "assets/icon/down.svg";
+import { ReactComponent as Search } from "assets/icon/search.svg";
 
 type IconProps = {
   className?: string;
