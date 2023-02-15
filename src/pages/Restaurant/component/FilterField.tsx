@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
-import Icon from "components/common/Icon";
+import Chip from "components/common/Chip";
 import Input from "components/common/Input";
+import useFiltering from "../hook/useFiltering";
 
 const InputOverlay = styled.div`
   position: absolute;
@@ -15,7 +16,9 @@ const SearchField = styled.div`
 `;
 
 const ChipGroups = styled.div`
+  display: flex;
   padding: 8px 16px;
+  gap: 8px;
 `;
 
 const FilterField = ({
@@ -27,17 +30,28 @@ const FilterField = ({
   openSearchModal?: Function;
   closeSearchModal?: Function;
 }) => {
-  return (
-    <>
-      <SearchField className="map-search-field">
-        <Input
-          className="search-input"
-          placeholder="채식식당을 검색해주세요!"
-          prefixIcon={isSearchMode ? "left" : ""}
-          focusMode={isSearchMode ? true : false}
-          onPrefixIconClick={closeSearchModal}
-        />
-        {!isSearchMode && (
+  const [filterOptions] = useFiltering(isSearchMode);
+
+  const SearchContents = () => {
+    if (isSearchMode) {
+      return (
+        <SearchField className="map-search-field">
+          <Input
+            autoFocus={true}
+            className="search-input"
+            placeholder="채식식당을 검색해주세요!"
+            prefixIcon="left"
+            onPrefixIconClick={closeSearchModal}
+          />
+        </SearchField>
+      );
+    } else {
+      return (
+        <SearchField className="map-search-field">
+          <Input
+            className="search-input"
+            placeholder="채식식당을 검색해주세요!"
+          />
           <InputOverlay
             onClick={() => {
               if (typeof openSearchModal === "function") {
@@ -45,9 +59,26 @@ const FilterField = ({
               }
             }}
           />
-        )}
-      </SearchField>
-      <ChipGroups></ChipGroups>
+        </SearchField>
+      );
+    }
+  };
+
+  return (
+    <>
+      <SearchContents />
+      <ChipGroups>
+        {filterOptions.map((item) => {
+          return (
+            <Chip
+              type={isSearchMode ? "primary" : "secondary"}
+              active={item?.isActive}
+            >
+              {item.name}
+            </Chip>
+          );
+        })}
+      </ChipGroups>
     </>
   );
 };

@@ -19,7 +19,7 @@ type InputPropsType = {
   suffixIcon?: string;
   onPrefixIconClick?: Function;
   onSuffixIconClick?: Function;
-  focusMode?: boolean;
+  autoFocus?: boolean;
 };
 
 const IconButton = ({
@@ -32,6 +32,7 @@ const IconButton = ({
   type: "prefix" | "suffix";
 }) => {
   const style = {
+    backgroundColor: "transparent",
     paddingRight: "0px",
     paddingLeft: "0px",
   };
@@ -39,9 +40,9 @@ const IconButton = ({
     style.paddingRight = "8px";
   }
   return (
-    <StyledIconButton onClick={() => onClick()} style={style}>
+    <button onClick={() => onClick()} style={style}>
       <Icon icon={icon} size="sm" />
-    </StyledIconButton>
+    </button>
   );
 };
 
@@ -58,11 +59,11 @@ export default function Input({
   onPrefixIconClick,
   suffixIcon,
   onSuffixIconClick,
-  focusMode,
+  autoFocus,
   ...props
 }: InputPropsType): ReactElement {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [isFocused, setIsFocused] = useState(focusMode);
+  const [isFocused, setIsFocused] = useState(autoFocus);
 
   let inputClassName = `${className ?? ""}`;
   if (disabled) {
@@ -74,10 +75,10 @@ export default function Input({
 
   // TODO: focus가 잡힐 때도 있고 안 잡힐 때도 있음. 문제 해결 필요
   useEffect(() => {
-    if (focusMode && inputRef.current) {
+    if (autoFocus && inputRef.current) {
       inputRef.current.focus();
     }
-  }, [inputRef, focusMode]);
+  }, [inputRef, autoFocus]);
 
   return (
     <LabelField disabled={disabled}>
@@ -169,19 +170,15 @@ const StyledInput = styled.input`
 
   display: flex;
   align-items: center;
+  width: 100%;
+  padding: 0;
+  background: transparent;
   color: ${theme.palette.colors.basic.black};
   box-sizing: border-box;
   border: none;
   outline: none;
-  background: transparent;
-  padding: 0;
-  width: 100%;
 
   ::placeholder {
     color: ${theme.palette.colors.gray[400]};
   }
-`;
-
-const StyledIconButton = styled.button`
-  background-color: transparent;
 `;

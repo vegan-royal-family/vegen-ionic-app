@@ -4,11 +4,13 @@ import { css, SerializedStyles } from "@emotion/react";
 import theme from "styles/theme";
 
 type ChipPropsType = {
-  size: "sm" | "md";
-  active: boolean;
+  type?: "primary" | "secondary";
+  size?: "sm" | "md";
+  active?: boolean;
 };
 
 export default function Chip({
+  type = "primary",
   size = "md",
   active = false,
   children,
@@ -18,17 +20,30 @@ export default function Chip({
     md: theme.typography.body3,
   };
   const sizeStyle = SIZES[size];
+  const colorStyle = COLORS[type];
 
   return (
     <StyledChip
       active={active}
       sizeStyle={sizeStyle}
+      colorStyle={colorStyle}
       typography={typography[size]}
     >
       {children}
     </StyledChip>
   );
 }
+
+const COLORS = {
+  primary: css`
+    --chip-background-color: ${theme.palette.colors.gray[200]};
+    --chip-text-color: ${theme.palette.colors.gray[500]};
+  `,
+  secondary: css`
+    --chip-background-color: ${theme.palette.colors.basic.white};
+    --chip-text-color: ${theme.palette.colors.gray[500]};
+  `,
+};
 
 const SIZES = {
   sm: css`
@@ -39,11 +54,22 @@ const SIZES = {
   `,
 };
 
+const activeStyle = css`
+  color: ${theme.palette.colors.basic["white"]};
+  background-color: ${theme.palette.colors.primary[500]};
+  &:hover {
+    color: ${theme.palette.colors.basic["white"]};
+    background-color: ${theme.palette.colors.primary[500]};
+  }
+`;
+
 const StyledChip = styled.div<{
+  colorStyle: SerializedStyles;
   sizeStyle: SerializedStyles;
   typography: SerializedStyles;
   active: boolean;
 }>`
+  ${(p) => p.colorStyle}
   ${(p) => p.sizeStyle}
   ${(p) => p.typography}
 
@@ -57,23 +83,12 @@ const StyledChip = styled.div<{
 
   ${theme.typography.weightMedium};
 
-  color: ${(p) =>
-    p.active
-      ? theme.palette.colors.basic["white"]
-      : theme.palette.colors.gray[500]};
-
-  background: ${(p) =>
-    p.active
-      ? theme.palette.colors.primary[500]
-      : theme.palette.colors.gray[200]};
+  color: var(--chip-text-color);
+  background-color: var(--chip-background-color);
   &:hover {
-    color: ${(p) =>
-      p.active
-        ? theme.palette.colors.basic["white"]
-        : theme.palette.colors.gray[600]};
-    background: ${(p) =>
-      p.active
-        ? theme.palette.colors.primary[500]
-        : theme.palette.colors.primary[100]};
+    color: ${theme.palette.colors.gray[600]};
+    background-color: ${theme.palette.colors.primary[100]};
   }
+
+  ${(p) => p.active && activeStyle}
 `;
