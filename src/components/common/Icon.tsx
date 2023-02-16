@@ -8,6 +8,7 @@ import { ReactComponent as Left } from "assets/icon/left.svg";
 import { ReactComponent as Right } from "assets/icon/right.svg";
 import { ReactComponent as Down } from "assets/icon/down.svg";
 import { ReactComponent as Search } from "assets/icon/search.svg";
+import { ReactComponent as CloseSmall } from "assets/icon/close-small.svg";
 
 type IconProps = {
   className?: string;
@@ -21,7 +22,7 @@ const IconWrapper = styled.div<{ size: string | number; fill?: string }>`
   height: ${(p) => `${p.size}px`};
   svg {
     path {
-      fill: ${(p) => p.fill};
+      fill: ${(p) => p.fill} !important;
     }
   }
 `;
@@ -72,8 +73,8 @@ export default function Icon({
     //   return <CloseOneFilled {...args} />;
     // case "close-one":
     //   return <CloseOne {...args} />;
-    // case "close-small":
-    //   return <CloseSmall {...args} />;
+    case "close-small":
+      return <CloseSmall {...args} />;
     // case "delete":
     //   return <Remove {...args} />;
     // case "double-left":

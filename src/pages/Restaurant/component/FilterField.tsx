@@ -30,7 +30,7 @@ const FilterField = ({
   openSearchModal?: Function;
   closeSearchModal?: Function;
 }) => {
-  const [filterOptions] = useFiltering(isSearchMode);
+  const { filterOptions, onFilterChanged } = useFiltering(isSearchMode);
 
   const SearchContents = () => {
     if (isSearchMode) {
@@ -68,11 +68,19 @@ const FilterField = ({
     <>
       <SearchContents />
       <ChipGroups>
-        {filterOptions.map((item) => {
+        {filterOptions.map((item, index) => {
           return (
             <Chip
               type={isSearchMode ? "primary" : "secondary"}
               active={item?.isActive}
+              suffixIcon={item?.isActive ? "close-small" : null}
+              suffixIconColor="#fff"
+              style={
+                !isSearchMode
+                  ? { boxShadow: "0px 1px 2px rgba(15, 23, 42, 0.25)" }
+                  : {}
+              }
+              onClick={() => onFilterChanged(index)}
             >
               {item.name}
             </Chip>

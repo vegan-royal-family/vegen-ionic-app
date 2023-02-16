@@ -12,7 +12,17 @@ const useFiltering = (isSearchMode?: boolean) => {
     })
   );
 
-  return [filterOptions];
+  const onFilterChanged = (index: number) => {
+    const newList = [...filterOptions];
+    if (filterOptions[index].isActive) {
+      newList[index].isActive = false;
+    } else {
+      newList[index].isActive = true;
+    }
+    setFilterOptions(newList);
+  };
+
+  return { filterOptions, onFilterChanged };
 };
 
 export default useFiltering;
