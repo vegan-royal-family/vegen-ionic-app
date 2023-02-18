@@ -1,4 +1,4 @@
-import "./style.scss";
+import "./style/style.scss";
 import { IonPage, IonContent, IonText, IonButton } from "@ionic/react";
 import styled from "@emotion/styled";
 import Icon from "components/common/Icon";

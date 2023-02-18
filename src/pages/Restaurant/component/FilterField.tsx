@@ -18,7 +18,10 @@ const SearchField = styled.div`
 const ChipGroups = styled.div`
   display: flex;
   padding: 8px 16px;
-  gap: 8px;
+  overflow: auto;
+  .filter-item:not(:last-child) {
+    margin-right: 8px;
+  }
 `;
 
 const FilterField = ({
@@ -71,10 +74,12 @@ const FilterField = ({
         {filterOptions.map((item, index) => {
           return (
             <Chip
-              type={isSearchMode ? "primary" : "secondary"}
+              className="filter-item"
+              key={item.name}
               active={item?.isActive}
               suffixIcon={item?.isActive ? "close-small" : null}
               suffixIconColor="#fff"
+              type={isSearchMode ? "primary" : "secondary"}
               style={
                 !isSearchMode
                   ? { boxShadow: "0px 1px 2px rgba(15, 23, 42, 0.25)" }

@@ -5,6 +5,7 @@ import theme from "styles/theme";
 import Icon from "./Icon";
 
 type ChipPropsType = {
+  className?: string;
   type?: "primary" | "secondary";
   size?: "sm" | "md";
   active?: boolean;
@@ -17,6 +18,7 @@ type ChipPropsType = {
 };
 
 export default function Chip({
+  className,
   type = "primary",
   size = "md",
   active = false,
@@ -38,6 +40,7 @@ export default function Chip({
 
   return (
     <StyledChip
+      className={className}
       active={active}
       sizeStyle={sizeStyle}
       colorStyle={colorStyle}

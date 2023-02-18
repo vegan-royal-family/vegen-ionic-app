@@ -1,20 +1,28 @@
-import { IonContent, IonModal } from "@ionic/react";
+import { IonContent, IonModal, IonText } from "@ionic/react";
 import { useRef } from "react";
 
 const BottomModal = () => {
   const modalRef = useRef<HTMLIonModalElement>(null);
+  const initialModalHeight = 100;
+  const initialBreakPoint = parseFloat(
+    (initialModalHeight / window.innerHeight).toFixed(3)
+  );
 
   return (
     <IonModal
       id="main-bottom-modal"
       ref={modalRef}
       isOpen={true}
-      initialBreakpoint={0.15}
-      breakpoints={[0.15, 1]}
+      initialBreakpoint={initialBreakPoint}
+      breakpoints={[initialBreakPoint, 1]}
       backdropDismiss={false}
       backdropBreakpoint={0.8}
     >
-      <IonContent className="ion-padding"></IonContent>
+      <IonContent className="ion-padding">
+        <IonText>
+          안녕하세요 <span>김땡땡</span>님
+        </IonText>
+      </IonContent>
     </IonModal>
   );
 };

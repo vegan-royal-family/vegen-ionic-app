@@ -1,6 +1,14 @@
 import { useState } from "react";
 
-const defaultFilterChips = ["폴로", "페스코", "락토", "오보"];
+const defaultFilterChips = [
+  "폴로",
+  "페스코",
+  "락토",
+  "오보",
+  "테스트1",
+  "테스트2",
+  "테스트3",
+];
 
 const useFiltering = (isSearchMode?: boolean) => {
   const [filterOptions, setFilterOptions] = useState(
