@@ -22,8 +22,6 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./styles/variables.scss";
-import "swiper/swiper.min.css";
-import "@ionic/react/css/ionic-swiper.css";
 
 setupIonicReact();
 

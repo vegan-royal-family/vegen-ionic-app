@@ -3,7 +3,7 @@ import { useRef } from "react";
 
 const BottomModal = () => {
   const modalRef = useRef<HTMLIonModalElement>(null);
-  const initialModalHeight = 100;
+  const initialModalHeight = 80;
   const initialBreakPoint = parseFloat(
     (initialModalHeight / window.innerHeight).toFixed(3)
   );
