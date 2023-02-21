@@ -40,7 +40,7 @@ const SliderCard = styled.div`
 `;
 
 const Restaurant: React.FC = () => {
-  const { setCurrentPosition, zoomIn } = useKakaoMap();
+  const { setCurrentPosition, zoomIn } = useKakaoMap([]);
   const [openSearchModal, setOpenSearchModal] = useState<boolean>(false);
 
   return (

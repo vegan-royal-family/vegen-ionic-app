@@ -1,5 +1,5 @@
 import { useIonViewDidEnter } from "@ionic/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Geolocation } from "@capacitor/geolocation";
 
 declare global {
@@ -8,8 +8,9 @@ declare global {
   }
 }
 
-const useKakaoMap = () => {
+const useKakaoMap = (data: Array<any>) => {
   const [map, setMap] = useState<any | null>(null);
+  const [markers, setMarkers] = useState<Array<any>>([]);
 
   const setCurrentPosition = async () => {
     if (!map) {
@@ -38,6 +39,30 @@ const useKakaoMap = () => {
     };
     setMap(new window.kakao.maps.Map(container, options));
   });
+
+  // 지도 첫 렌더링 시 한번 실행
+  useEffect(() => {
+    if (map) {
+      // "dragend" 이벤트 리스너 삭제, 등록
+      // "zoom_changed" 이벤트 리스너 삭제, 등록
+      // 현재 바운드 체크해서 마커 리스트(상태) 바꿔주는 함수임
+      //const markerImage = new window.kakao.maps.MarkerImage(imgSrc, imgSize)
+
+      const markerList = [];
+      for (let index = 0; index > data.length; index++) {
+        const marker = new window.kakao.maps.Marker({
+          map: map,
+          position: new window.kakao.maps.LatLng(
+            data[index].lat,
+            data[index].lng
+          ),
+          //image: markerImage
+        });
+        markerList.push(marker);
+      }
+      setMarkers(markerList);
+    }
+  }, [map, data]);
 
   return { setCurrentPosition, zoomIn };
 };
