@@ -1,20 +1,27 @@
-ion-fab {
-  top: 45%;
-}
+#restaurant-page {
+  ion-fab-button {
+    width: 36px;
+    height: 36px;
+    --background: #fff;
+    --background-hover: #f4f7f8;
+    --background-activated: #f4f7f8;
+    --background-focused: #fff;
+    margin-bottom: 8px;
+    margin-right: 16px;
+  }
 
-ion-fab-button {
-  width: 36px;
-  height: 36px;
-  --background: #fff;
-  --background-hover: #f4f7f8;
-  --background-activated: #f4f7f8;
-  --background-focused: #fff;
-  margin-bottom: 8px;
-  margin-right: 6px;
-}
+  .swiper-slide {
+    width: calc(100% - 20px) !important;
+    height: 240px;
+  }
 
-.map-search-field {
-  .search-input {
+  .fab-btn-group {
+    position: absolute;
+    right: 0;
+    top: -96px;
+  }
+
+  .map-search-field .search-input {
     padding: 12px 16px;
   }
 }
@@ -27,6 +34,10 @@ ion-fab-button {
     --border-width: 0;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .map-search-field .search-input {
+    padding: 12px 16px;
   }
 }
 

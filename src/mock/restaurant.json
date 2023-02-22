@@ -8,8 +8,8 @@
     "rstrnt_tel_no": "025559173",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "근정 (채식 평일 점심),담정 (채식 평일 저녁 & 주말 전일),선정 (채식 평일 저녁 & 주말 전일),채정 (채식 평일 점심)",
-    "rstrnt_la": "37.5034158",
-    "rstrnt_lo": "127.0650719"
+    "lat": "37.5034158",
+    "lng": "127.0650719"
   },
   {
     "rstrnt_id": "46988",
@@ -20,8 +20,8 @@
     "rstrnt_tel_no": "027903421",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "비건채식,채식정식",
-    "rstrnt_la": "37.5179998",
-    "rstrnt_lo": "126.9777533"
+    "lat": "37.5179998",
+    "lng": "126.9777533"
   },
   {
     "rstrnt_id": "71547",
@@ -32,8 +32,8 @@
     "rstrnt_tel_no": "0559331117",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "도토리비빕밥 세트1인분(4인분 이상),도토리비빔밥",
-    "rstrnt_la": "35.7776301",
-    "rstrnt_lo": "128.1269411"
+    "lat": "35.7776301",
+    "lng": "128.1269411"
   },
   {
     "rstrnt_id": "72522",
@@ -44,8 +44,8 @@
     "rstrnt_tel_no": "0327668688",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "자연송이밥,잡채밥",
-    "rstrnt_la": "37.4740217",
-    "rstrnt_lo": "126.6185615"
+    "lat": "37.4740217",
+    "lng": "126.6185615"
   },
   {
     "rstrnt_id": "202",
@@ -56,8 +56,8 @@
     "rstrnt_tel_no": "027665539",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "채소반,해물파전",
-    "rstrnt_la": "37.5790212",
-    "rstrnt_lo": "126.9855911"
+    "lat": "37.5790212",
+    "lng": "126.9855911"
   },
   {
     "rstrnt_id": "86472",
@@ -68,8 +68,8 @@
     "rstrnt_tel_no": "0222131878",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "두부두루치기,모두부,묵무침 소,묵밥,버섯전골",
-    "rstrnt_la": "37.5896281",
-    "rstrnt_lo": "127.0623731"
+    "lat": "37.5896281",
+    "lng": "127.0623731"
   },
   {
     "rstrnt_id": "93193",
@@ -80,8 +80,8 @@
     "rstrnt_tel_no": "0552669120",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "된장뚝배기 (1인분),들깨찜 대,들깨찜 소,버섯전골 (2인분)",
-    "rstrnt_la": "35.2236571",
-    "rstrnt_lo": "128.6775961"
+    "lat": "35.2236571",
+    "lng": "128.6775961"
   },
   {
     "rstrnt_id": "149384",
@@ -92,8 +92,8 @@
     "rstrnt_tel_no": "028327595",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "아승지 저녁 코스,아승지 정식",
-    "rstrnt_la": "37.5078509",
-    "rstrnt_lo": "126.9112138"
+    "lat": "37.5078509",
+    "lng": "126.9112138"
   },
   {
     "rstrnt_id": "153377",
@@ -104,8 +104,8 @@
     "rstrnt_tel_no": "0559327393",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "더덕구이,도토리비빔밥,도토리비빔밥세트,채식나물밥상",
-    "rstrnt_la": "35.7905599",
-    "rstrnt_lo": "128.087613"
+    "lat": "35.7905599",
+    "lng": "128.087613"
   },
   {
     "rstrnt_id": "1087",
@@ -116,8 +116,8 @@
     "rstrnt_tel_no": "027332081",
     "resve_posbl_at": "Y",
     "sle_vgtr_menu_info_dc": "마음식,선식(점심 한정 메뉴),원식,희식(사전 예약 메뉴)",
-    "rstrnt_la": "37.5739619",
-    "rstrnt_lo": "126.983228"
+    "lat": "37.5739619",
+    "lng": "126.983228"
   },
   {
     "rstrnt_id": "311945",
@@ -128,8 +128,8 @@
     "rstrnt_tel_no": "0626753552",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "소인 (만6세~12세미만),채식뷔페 대인",
-    "rstrnt_la": "35.1315331",
-    "rstrnt_lo": "126.8990031"
+    "lat": "35.1315331",
+    "lng": "126.8990031"
   },
   {
     "rstrnt_id": "651901",
@@ -140,8 +140,8 @@
     "rstrnt_tel_no": "0312815879",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "저녁(5~7세),저녁(중학생~성인),저녁(초등학생),점심(5~7세),점심(중학생~성인),점심(초등학생),성인(중학생이상) 점심,성인(중학생이상) 저녁,유아(5~7세) 저녁,유아(5",
-    "rstrnt_la": "37.2967256",
-    "rstrnt_lo": "127.1076748"
+    "lat": "37.2967256",
+    "lng": "127.1076748"
   },
   {
     "rstrnt_id": "458889",
@@ -152,8 +152,8 @@
     "rstrnt_tel_no": "025762158",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "비건피자,소이라떼,아포가토",
-    "rstrnt_la": "37.4769089",
-    "rstrnt_lo": "127.0494592"
+    "lat": "37.4769089",
+    "lng": "127.0494592"
   },
   {
     "rstrnt_id": "524106",
@@ -164,8 +164,8 @@
     "rstrnt_tel_no": "023251028",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "베지버거와 현미밥,블루베리건크림케이크,아메리카노,자연식 당근케이크,자연식 브라우니",
-    "rstrnt_la": "37.5462624",
-    "rstrnt_lo": "126.9163339"
+    "lat": "37.5462624",
+    "lng": "126.9163339"
   },
   {
     "rstrnt_id": "524245",
@@ -176,8 +176,8 @@
     "rstrnt_tel_no": "027202802",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "채식뷔페 1인",
-    "rstrnt_la": "37.5743587",
-    "rstrnt_lo": "126.9857345"
+    "lat": "37.5743587",
+    "lng": "126.9857345"
   },
   {
     "rstrnt_id": "531383",
@@ -188,8 +188,8 @@
     "rstrnt_tel_no": "029694254",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "반창고 스페셜,채식 당근 케이크",
-    "rstrnt_la": "37.5925749",
-    "rstrnt_lo": "127.0516833"
+    "lat": "37.5925749",
+    "lng": "127.0516833"
   },
   {
     "rstrnt_id": "535010",
@@ -200,8 +200,8 @@
     "rstrnt_tel_no": "0263679870",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "가지 시금치 파스타,그린빈 토마토 리조또,그린시금치뇨끼_비건,단호박다크초코케익,루꼴라버섯고르곤졸라 피자,모로칸샐러드 & 후무스 & 피타,버섯 두유 크림 리조또,시금치크림커리,아보카",
-    "rstrnt_la": "37.545865",
-    "rstrnt_lo": "126.9208467"
+    "lat": "37.545865",
+    "lng": "126.9208467"
   },
   {
     "rstrnt_id": "542112",
@@ -212,8 +212,8 @@
     "rstrnt_tel_no": "025780512",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "도시락메뉴,식사메뉴",
-    "rstrnt_la": "37.4735213",
-    "rstrnt_lo": "127.0510045"
+    "lat": "37.4735213",
+    "lng": "127.0510045"
   },
   {
     "rstrnt_id": "611452",
@@ -224,8 +224,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "깨죽,새알팥죽,콩죽,팥칼국수",
-    "rstrnt_la": "35.1960725",
-    "rstrnt_lo": "128.5654837"
+    "lat": "35.1960725",
+    "lng": "128.5654837"
   },
   {
     "rstrnt_id": "617992",
@@ -236,8 +236,8 @@
     "rstrnt_tel_no": "0415585500",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "성인,유아,초등학생",
-    "rstrnt_la": "36.8314203",
-    "rstrnt_lo": "127.1870353"
+    "lat": "36.8314203",
+    "lng": "127.1870353"
   },
   {
     "rstrnt_id": "976",
@@ -248,8 +248,8 @@
     "rstrnt_tel_no": "0232102151",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "성인,어린이",
-    "rstrnt_la": "37.574158",
-    "rstrnt_lo": "126.983313"
+    "lat": "37.574158",
+    "lng": "126.983313"
   },
   {
     "rstrnt_id": "629599",
@@ -260,8 +260,8 @@
     "rstrnt_tel_no": "0522442234",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "고추장콩불고기쌈밥정식,구운야채샐러드,들깨 버섯 두유 크림 파스타,버섯만두전골,버섯스테이크,세트메뉴,어린잎 채소 피자,찹쌀버섯탕수,채소현미필라프,콩까스 플레이트,콩불고기토마토파스타,",
-    "rstrnt_la": "35.5745369",
-    "rstrnt_lo": "129.3056436"
+    "lat": "35.5745369",
+    "lng": "129.3056436"
   },
   {
     "rstrnt_id": "631762",
@@ -272,8 +272,8 @@
     "rstrnt_tel_no": "01026171980",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "생크림 카스텔라,수제 호두파이,호밀빵",
-    "rstrnt_la": "37.5371636",
-    "rstrnt_lo": "126.8638856"
+    "lat": "37.5371636",
+    "lng": "126.8638856"
   },
   {
     "rstrnt_id": "634228",
@@ -284,8 +284,8 @@
     "rstrnt_tel_no": "0323252249",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "맥주,사이다,소주,커피,콜라",
-    "rstrnt_la": "37.5077727",
-    "rstrnt_lo": "126.7503225"
+    "lat": "37.5077727",
+    "lng": "126.7503225"
   },
   {
     "rstrnt_id": "643001",
@@ -296,8 +296,8 @@
     "rstrnt_tel_no": "0537951686",
     "resve_posbl_at": "Y",
     "sle_vgtr_menu_info_dc": "고스트 팔락,사모사 Samosa,아소티드 케밥,알루 고비",
-    "rstrnt_la": "35.8390137",
-    "rstrnt_lo": "128.7089469"
+    "lat": "35.8390137",
+    "lng": "128.7089469"
   },
   {
     "rstrnt_id": "659658",
@@ -308,8 +308,8 @@
     "rstrnt_tel_no": "07041775555",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "꽃빵 & 고추잡채 / Stir - fried Korean Chili Peppers and Floral Bread,나랑 버섯 콩나물찜,나랑샐러드/Narang\u2019s Salad,두부자몽샐",
-    "rstrnt_la": "35.156747",
-    "rstrnt_lo": "129.134285"
+    "lat": "35.156747",
+    "lng": "129.134285"
   },
   {
     "rstrnt_id": "686702",
@@ -320,8 +320,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "레몬주스,바나나주스,오렌지주스,토마토주스,파인주스",
-    "rstrnt_la": "35.1698533",
-    "rstrnt_lo": "129.1310696"
+    "lat": "35.1698533",
+    "lng": "129.1310696"
   },
   {
     "rstrnt_id": "689273",
@@ -332,8 +332,8 @@
     "rstrnt_tel_no": "0647394959",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "연잎도시락,연잎밥정식&다도,해초콩고기비빔밥&다도",
-    "rstrnt_la": "33.2354525",
-    "rstrnt_lo": "126.3636694"
+    "lat": "33.2354525",
+    "lng": "126.3636694"
   },
   {
     "rstrnt_id": "691190",
@@ -344,8 +344,8 @@
     "rstrnt_tel_no": "028881317",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "머핀,브라우니, 초코칩쿠키,샤브레쿠키,스콘,아메리카노,케이크1피스",
-    "rstrnt_la": "37.4841551",
-    "rstrnt_lo": "126.9335742"
+    "lat": "37.4841551",
+    "lng": "126.9335742"
   },
   {
     "rstrnt_id": "699014",
@@ -356,8 +356,8 @@
     "rstrnt_tel_no": "0547465400",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "시래기밥 추가 1인",
-    "rstrnt_la": "35.8096348",
-    "rstrnt_lo": "129.3062794"
+    "lat": "35.8096348",
+    "lng": "129.3062794"
   },
   {
     "rstrnt_id": "708072",
@@ -368,8 +368,8 @@
     "rstrnt_tel_no": "0317029982",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "감바스알아히요",
-    "rstrnt_la": "37.403351",
-    "rstrnt_lo": "127.1178986"
+    "lat": "37.403351",
+    "lng": "127.1178986"
   },
   {
     "rstrnt_id": "709089",
@@ -380,8 +380,8 @@
     "rstrnt_tel_no": "07077463355",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "계절차,공정무역 커피,꽃차류,현미채식밥상",
-    "rstrnt_la": "36.3861643",
-    "rstrnt_lo": "127.3179351"
+    "lat": "36.3861643",
+    "lng": "127.3179351"
   },
   {
     "rstrnt_id": "709131",
@@ -392,8 +392,8 @@
     "rstrnt_tel_no": "07041301313",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "고급장아찌와 반찬,연잎밥상,포장연잎밥",
-    "rstrnt_la": "37.476295",
-    "rstrnt_lo": "127.0427131"
+    "lat": "37.476295",
+    "lng": "127.0427131"
   },
   {
     "rstrnt_id": "711987",
@@ -404,8 +404,8 @@
     "rstrnt_tel_no": "07041336531",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "바질마늘토스트세트,샐러드 세트,수박쥬스",
-    "rstrnt_la": "37.5461485",
-    "rstrnt_lo": "127.1035144"
+    "lat": "37.5461485",
+    "lng": "127.1035144"
   },
   {
     "rstrnt_id": "858468",
@@ -416,8 +416,8 @@
     "rstrnt_tel_no": "0613835255",
     "resve_posbl_at": "Y",
     "sle_vgtr_menu_info_dc": "4세이상,4세이상,중학생이상,중학생이상,초등학생이상,초등학생이상",
-    "rstrnt_la": "35.184963",
-    "rstrnt_lo": "127.0097551"
+    "lat": "35.184963",
+    "lng": "127.0097551"
   },
   {
     "rstrnt_id": "735629",
@@ -428,8 +428,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "딸기주스(냉동),레몬주스,생딸기주스,키위주스,토마토주스",
-    "rstrnt_la": "37.5273756",
-    "rstrnt_lo": "127.027458"
+    "lat": "37.5273756",
+    "lng": "127.027458"
   },
   {
     "rstrnt_id": "736310",
@@ -440,8 +440,8 @@
     "rstrnt_tel_no": "0319198279",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "아메리카노",
-    "rstrnt_la": "37.670336",
-    "rstrnt_lo": "126.7295392"
+    "lat": "37.670336",
+    "lng": "126.7295392"
   },
   {
     "rstrnt_id": "736398",
@@ -452,8 +452,8 @@
     "rstrnt_tel_no": "0632453789",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "미취학,성인,초등학생",
-    "rstrnt_la": "35.8526108",
-    "rstrnt_lo": "127.258347"
+    "lat": "35.8526108",
+    "lng": "127.258347"
   },
   {
     "rstrnt_id": "763313",
@@ -464,8 +464,8 @@
     "rstrnt_tel_no": "0438486262",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "미취학아동,저녁(디너),점심(런치),초등학생,토,일,공휴일",
-    "rstrnt_la": "36.9869995",
-    "rstrnt_lo": "127.7377459"
+    "lat": "36.9869995",
+    "lng": "127.7377459"
   },
   {
     "rstrnt_id": "764874",
@@ -476,8 +476,8 @@
     "rstrnt_tel_no": "01030440771",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "감동빵,까망빵 린다치즈,까망빵(국내산 유기농 흑밀),내몸에 좋은 시나몬 잼,린다치즈빵,밀과보리빵,상미빵(기본빵),시와빵,엄마빵,웃음빵 린다치즈,웃음빵(시나몬빵),촘촘빵,행복만빵",
-    "rstrnt_la": "37.5968872",
-    "rstrnt_lo": "126.9489406"
+    "lat": "37.5968872",
+    "lng": "126.9489406"
   },
   {
     "rstrnt_id": "778631",
@@ -488,8 +488,8 @@
     "rstrnt_tel_no": "01092237747",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "샌드위치,샐러드볼,스무디볼",
-    "rstrnt_la": "33.2527726",
-    "rstrnt_lo": "126.5573963"
+    "lat": "33.2527726",
+    "lng": "126.5573963"
   },
   {
     "rstrnt_id": "821974",
@@ -500,8 +500,8 @@
     "rstrnt_tel_no": "025776316",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "1인 기준",
-    "rstrnt_la": "37.4769879",
-    "rstrnt_lo": "127.0473759"
+    "lat": "37.4769879",
+    "lng": "127.0473759"
   },
   {
     "rstrnt_id": "75730",
@@ -512,8 +512,8 @@
     "rstrnt_tel_no": "0260809797",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "가지덮밥정식,구황작물피자,두부데리야끼정식,두유크림파스타,레몬에이드,로제파스타/리조또,바베큐버섯피자,바질페스토야채피자,버섯크림리조또,보리커피,세가지버섯피자,유기농 디카페안 소이라떼,",
-    "rstrnt_la": "37.5576343",
-    "rstrnt_lo": "126.9055895"
+    "lat": "37.5576343",
+    "lng": "126.9055895"
   },
   {
     "rstrnt_id": "126051",
@@ -524,8 +524,8 @@
     "rstrnt_tel_no": "01044432503",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "100%현미두부쇼콜라,레드민트,레몬안녕, 얼그레이,무농약 돌복숭&매실청,발아현미떡케익,엘더플라워 레모네이드 코디얼,우리밀&통밀 스콘,커피,현미소복소복",
-    "rstrnt_la": "35.1604721",
-    "rstrnt_lo": "129.1114443"
+    "lat": "35.1604721",
+    "lng": "129.1114443"
   },
   {
     "rstrnt_id": "271235",
@@ -536,8 +536,8 @@
     "rstrnt_tel_no": "023368457",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "두유들깨버섯파스타,두유현미떡국,베지터블스튜,병아리콩현미밥샐러드,제철채소토마토소스파스타,현미단호박수프,현미된장자장덮밥",
-    "rstrnt_la": "37.5565595",
-    "rstrnt_lo": "126.9187667"
+    "lat": "37.5565595",
+    "lng": "126.9187667"
   },
   {
     "rstrnt_id": "419884",
@@ -548,8 +548,8 @@
     "rstrnt_tel_no": "0438423333",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "어른,청소년,유치원(5세~7세),점심 뷔페,초등학생",
-    "rstrnt_la": "36.9737141",
-    "rstrnt_lo": "127.9714125"
+    "lat": "36.9737141",
+    "lng": "127.9714125"
   },
   {
     "rstrnt_id": "572367",
@@ -560,8 +560,8 @@
     "rstrnt_tel_no": "07088245959",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "라따뚜이,라자냐,맥앤치즈,베제투스버거,브리또볼,비건비프 파니니,빈즈파티샐러드,아프리 콜라,진토닉,칠리,카프레제샐러드,카프레제파니니,콤부차,하우스 레드와인,할라피뇨버거",
-    "rstrnt_la": "37.5437073",
-    "rstrnt_lo": "126.9872746"
+    "lat": "37.5437073",
+    "lng": "126.9872746"
   },
   {
     "rstrnt_id": "645596",
@@ -572,8 +572,8 @@
     "rstrnt_tel_no": "0647499395",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "20인 이상 사전예약 약선채식뷔페,들깨수제비,들깨죽,보리비빔밥,연잎밥,팥칼국수",
-    "rstrnt_la": "33.4718739",
-    "rstrnt_lo": "126.473809"
+    "lat": "33.4718739",
+    "lng": "126.473809"
   },
   {
     "rstrnt_id": "788430",
@@ -584,8 +584,8 @@
     "rstrnt_tel_no": "0647220429",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "ABC 주스,가스파초 애호박국수,모카포트커피,병맥주,살사 라이스,와인,케일주스,통새우크림치즈베아글",
-    "rstrnt_la": "33.5124308",
-    "rstrnt_lo": "126.5211498"
+    "lat": "33.5124308",
+    "lng": "126.5211498"
   },
   {
     "rstrnt_id": "791094",
@@ -596,8 +596,8 @@
     "rstrnt_tel_no": "0622235678",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "성인",
-    "rstrnt_la": "35.1324027",
-    "rstrnt_lo": "126.9433062"
+    "lat": "35.1324027",
+    "lng": "126.9433062"
   },
   {
     "rstrnt_id": "809070",
@@ -608,8 +608,8 @@
     "rstrnt_tel_no": "0264491139",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "리코타치즈샐러드,버섯샐러드,초록초록샐러드",
-    "rstrnt_la": "37.573774",
-    "rstrnt_lo": "126.9731379"
+    "lat": "37.573774",
+    "lng": "126.9731379"
   },
   {
     "rstrnt_id": "817949",
@@ -620,8 +620,8 @@
     "rstrnt_tel_no": "0612846277",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "부페성인1인",
-    "rstrnt_la": "34.794237",
-    "rstrnt_lo": "126.428707"
+    "lat": "34.794237",
+    "lng": "126.428707"
   },
   {
     "rstrnt_id": "22029",
@@ -632,8 +632,8 @@
     "rstrnt_tel_no": "01046978922",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "넛라떼,바닐라라떼,비건브런치,아메리카노,아인슈페너,코코파인워터,퍼지브라우니,현미스콘",
-    "rstrnt_la": "34.9898612",
-    "rstrnt_lo": "128.6964627"
+    "lat": "34.9898612",
+    "lng": "128.6964627"
   },
   {
     "rstrnt_id": "24155",
@@ -644,8 +644,8 @@
     "rstrnt_tel_no": "01057640883",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "커피",
-    "rstrnt_la": "34.6766769",
-    "rstrnt_lo": "126.9020772"
+    "lat": "34.6766769",
+    "lng": "126.9020772"
   },
   {
     "rstrnt_id": "30749",
@@ -656,8 +656,8 @@
     "rstrnt_tel_no": "07051801234",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "[Vegan] 마시멜로 초코쿠키,[Vegan] 만두,[Vegan] 미트볼,[Vegan] 파스타,뱅쇼,포르투갈와인과 하와이맥주",
-    "rstrnt_la": "33.5372517",
-    "rstrnt_lo": "126.6188818"
+    "lat": "33.5372517",
+    "lng": "126.6188818"
   },
   {
     "rstrnt_id": "33955",
@@ -668,8 +668,8 @@
     "rstrnt_tel_no": "025028858",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "구운 비트 단호박 퀴노아 샐러드,네가지 버섯과 루꼴라 샐러드,볼로네제라구 파스타,불구이덮밥,비건 루꼴라 피자,스파이시 머쉬룸 알리오 올리오,양송이 크림 파스타,참깨땅콩소스 들기름",
-    "rstrnt_la": "37.4563842",
-    "rstrnt_lo": "127.0316404"
+    "lat": "37.4563842",
+    "lng": "127.0316404"
   },
   {
     "rstrnt_id": "46213",
@@ -680,8 +680,8 @@
     "rstrnt_tel_no": "01048645315",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "비건빵, 비건과자, 음료",
-    "rstrnt_la": "37.4028943",
-    "rstrnt_lo": "126.9056635"
+    "lat": "37.4028943",
+    "lng": "126.9056635"
   },
   {
     "rstrnt_id": "55027",
@@ -692,8 +692,8 @@
     "rstrnt_tel_no": "025868088",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "곡물패티버거,두유리조또,베지함박플레이트,보리커피,야채스프커리,오늘의케이크,타코라이스,템페조림덮밥,템페탕수,포두부 시금치크림파스타",
-    "rstrnt_la": "37.5797223",
-    "rstrnt_lo": "126.9686012"
+    "lat": "37.5797223",
+    "lng": "126.9686012"
   },
   {
     "rstrnt_id": "68066",
@@ -704,8 +704,8 @@
     "rstrnt_tel_no": "025697165",
     "resve_posbl_at": "Y",
     "sle_vgtr_menu_info_dc": "근정식 (평일 점심),선정식 (평일 저녁 & 주말 전일),채정",
-    "rstrnt_la": "37.5000263",
-    "rstrnt_lo": "127.0365456"
+    "lat": "37.5000263",
+    "lng": "127.0365456"
   },
   {
     "rstrnt_id": "68405",
@@ -716,8 +716,8 @@
     "rstrnt_tel_no": "0313020992",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "커피",
-    "rstrnt_la": "37.2347615",
-    "rstrnt_lo": "127.0242345"
+    "lat": "37.2347615",
+    "lng": "127.0242345"
   },
   {
     "rstrnt_id": "75318",
@@ -728,8 +728,8 @@
     "rstrnt_tel_no": "0260840524",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "비건크림파스타,특제 그린커리",
-    "rstrnt_la": "37.6005895",
-    "rstrnt_lo": "127.0360742"
+    "lat": "37.6005895",
+    "lng": "127.0360742"
   },
   {
     "rstrnt_id": "913544",
@@ -740,8 +740,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "빵",
-    "rstrnt_la": "37.4854994",
-    "rstrnt_lo": "126.8943518"
+    "lat": "37.4854994",
+    "lng": "126.8943518"
   },
   {
     "rstrnt_id": "914431",
@@ -752,8 +752,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "Art of Vegetable,Luxury of Vegetable : Spoil Your Self (1人),Natural Wine : The Jealousy of Nature,Or",
-    "rstrnt_la": "37.4854265",
-    "rstrnt_lo": "127.0189763"
+    "lat": "37.4854265",
+    "lng": "127.0189763"
   },
   {
     "rstrnt_id": "102540",
@@ -764,8 +764,8 @@
     "rstrnt_tel_no": "0237896292",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "갈릭 후무스,당근 오렌지 주스,리치 퍼지 초콜릿 브라우니,미라클(ABC) 주스,베지터블 파히타 부리또,비건 라자냐,크리미 코코넛 보울,피넛버터 프로틴 바",
-    "rstrnt_la": "37.5409539",
-    "rstrnt_lo": "126.9898199"
+    "lat": "37.5409539",
+    "lng": "126.9898199"
   },
   {
     "rstrnt_id": "918356",
@@ -776,8 +776,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "No시럽 오렌지에이드,No시럽 오미자에이드,No시럽 청포도케일주스,No시럽 토마토주스,샐러드 300g,스톡홀름 커피",
-    "rstrnt_la": "35.8646609",
-    "rstrnt_lo": "128.6260454"
+    "lat": "35.8646609",
+    "lng": "128.6260454"
   },
   {
     "rstrnt_id": "919119",
@@ -788,8 +788,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "간장양념 채소구이찜과 나물솥밥,나물 주먹밥,문경 오미자 에이드,봄나물 페스토 파스타,전남 고흥 유자 에이드,제주 레몬 에이드,제철 모듬 채소 구이와 밥,채소 토마토 스프,카페라떼,",
-    "rstrnt_la": "37.7022986",
-    "rstrnt_lo": "126.6974191"
+    "lat": "37.7022986",
+    "lng": "126.6974191"
   },
   {
     "rstrnt_id": "110429",
@@ -800,8 +800,8 @@
     "rstrnt_tel_no": "01032509564",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "And유 스페셜 샌드위치,골든 밀크,그린 스무디,두유라떼,베지빈 버거,블랙커피,비건 불고기 버거,비건조각케익,스콘,에프터눈티,홍차 라떼",
-    "rstrnt_la": "33.4046266",
-    "rstrnt_lo": "126.2541916"
+    "lat": "33.4046266",
+    "lng": "126.2541916"
   },
   {
     "rstrnt_id": "113221",
@@ -812,8 +812,8 @@
     "rstrnt_tel_no": "01092102900",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "베지그릴드스테이크,인도마샬라커리,토마토스파게티,피자",
-    "rstrnt_la": "35.2793283",
-    "rstrnt_lo": "129.0858134"
+    "lat": "35.2793283",
+    "lng": "129.0858134"
   },
   {
     "rstrnt_id": "487",
@@ -824,8 +824,8 @@
     "rstrnt_tel_no": "027723011",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "딸기쥬스(냉동),수박쥬스(계절메뉴),자몽쥬스,청포도쥬스,토마토쥬스",
-    "rstrnt_la": "37.5647639",
-    "rstrnt_lo": "126.9817958"
+    "lat": "37.5647639",
+    "lng": "126.9817958"
   },
   {
     "rstrnt_id": "923870",
@@ -836,8 +836,8 @@
     "rstrnt_tel_no": "0316040061",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "100%통밀 호밀 비건 천연발효 통밀호밀 식빵,독일 정통 슈톨렌 600g,비건 100%통밀 얼그레이 스콘,비건 100%통밀 크랜베리 스콘,비건 쌀빵 파운드케이크 3종 + 비스코티",
-    "rstrnt_la": "37.3869271",
-    "rstrnt_lo": "127.115447"
+    "lat": "37.3869271",
+    "lng": "127.115447"
   },
   {
     "rstrnt_id": "927643",
@@ -848,8 +848,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "유기농 식빵",
-    "rstrnt_la": "37.4681679",
-    "rstrnt_lo": "127.1372077"
+    "lat": "37.4681679",
+    "lng": "127.1372077"
   },
   {
     "rstrnt_id": "928390",
@@ -860,8 +860,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "더치아메리카노,사과주스,오렌지주스,자몽주스",
-    "rstrnt_la": "37.4679525",
-    "rstrnt_lo": "126.9363936"
+    "lat": "37.4679525",
+    "lng": "126.9363936"
   },
   {
     "rstrnt_id": "133800",
@@ -872,8 +872,8 @@
     "rstrnt_tel_no": "0312271966",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "구운버섯샐러드,구운야채샌드위치,그린 샐러드,두부웰빙샌드위치,리코타치즈 샐러드,스트릿반미 샌드위치,연어 프레쉬 샐러드,왕새우 샐러드",
-    "rstrnt_la": "37.2198447",
-    "rstrnt_lo": "126.9543692"
+    "lat": "37.2198447",
+    "lng": "126.9543692"
   },
   {
     "rstrnt_id": "147842",
@@ -884,8 +884,8 @@
     "rstrnt_tel_no": "01027616887",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "국산팥우리밀칼국수",
-    "rstrnt_la": "37.4912088",
-    "rstrnt_lo": "126.9068999"
+    "lat": "37.4912088",
+    "lng": "126.9068999"
   },
   {
     "rstrnt_id": "876",
@@ -896,8 +896,8 @@
     "rstrnt_tel_no": "027901108",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "미나리크림파스타,블랙올리브 갓 파스타,비욘드버거,컬리플라워 스테이크",
-    "rstrnt_la": "37.5354583",
-    "rstrnt_lo": "126.9992307"
+    "lat": "37.5354583",
+    "lng": "126.9992307"
   },
   {
     "rstrnt_id": "939809",
@@ -908,8 +908,8 @@
     "rstrnt_tel_no": "01046969006",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "버섯두부덮밥,얼큰 뚝배기,에이드,콩까스,한라산 고사리 뚝배기",
-    "rstrnt_la": "33.2855486",
-    "rstrnt_lo": "126.7281645"
+    "lat": "33.2855486",
+    "lng": "126.7281645"
   },
   {
     "rstrnt_id": "186987",
@@ -920,8 +920,8 @@
     "rstrnt_tel_no": "07088660986",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "Coffee (Hot / Iced),Smoothie,Tea,로 도넛,로케이크",
-    "rstrnt_la": "37.5513821",
-    "rstrnt_lo": "126.9077666"
+    "lat": "37.5513821",
+    "lng": "126.9077666"
   },
   {
     "rstrnt_id": "942854",
@@ -932,8 +932,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "illy 아메리카노 HOT,illy 아메리카노 ICED,구운버섯샐러드,그린에그샐러드,리코타치즈샐러드,멕시칸쉬림프샐러드,바질파스타샐러드,연두부샐러드,훈제연어과카몰리샐러드",
-    "rstrnt_la": "37.5874666",
-    "rstrnt_lo": "127.003014"
+    "lat": "37.5874666",
+    "lng": "127.003014"
   },
   {
     "rstrnt_id": "946013",
@@ -944,8 +944,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "철썩멍게 꽃밥,탱글꼬막 꽃밥,활짝채소 꽃밥",
-    "rstrnt_la": "37.5802602",
-    "rstrnt_lo": "126.9848264"
+    "lat": "37.5802602",
+    "lng": "126.9848264"
   },
   {
     "rstrnt_id": "948064",
@@ -956,8 +956,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "브라우니,오리엔탈 양갱케이크,콘브레드,크럼블 쑥 큐브파운드,클래식 스콘",
-    "rstrnt_la": "37.5654948",
-    "rstrnt_lo": "126.9221951"
+    "lat": "37.5654948",
+    "lng": "126.9221951"
   },
   {
     "rstrnt_id": "219739",
@@ -968,8 +968,8 @@
     "rstrnt_tel_no": "0315481912",
     "resve_posbl_at": "Y",
     "sle_vgtr_menu_info_dc": "김치,수정과,쌀식혜,오늘의 공양,팥죽,호박죽",
-    "rstrnt_la": "37.2739774",
-    "rstrnt_lo": "127.0612197"
+    "lat": "37.2739774",
+    "lng": "127.0612197"
   },
   {
     "rstrnt_id": "224515",
@@ -980,8 +980,8 @@
     "rstrnt_tel_no": "07075431339",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "감자튀김,그린 올리브&비스킷,두부 가라아게 로제 파스타,레몬 에이드,망고 한라봉 쉐이크,모듬 만두 전골,바게뜨 빵(4조각),밥 한공기,버섯 크림 리조또,블루 베리 바나나 쉐이크,비",
-    "rstrnt_la": "37.5429771",
-    "rstrnt_lo": "126.9728182"
+    "lat": "37.5429771",
+    "lng": "126.9728182"
   },
   {
     "rstrnt_id": "959146",
@@ -992,8 +992,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "*Hot_유기농 잎차,마도 할머니\u2019s 호박 파이,몰라세스 쿠키,발레리\u2019s 메이플 피칸 파이 (Valerie\u2019s maple pecan pie),버섯 크림 감자뇨끼 Mushroom c",
-    "rstrnt_la": "37.5520639",
-    "rstrnt_lo": "126.9069568"
+    "lat": "37.5520639",
+    "lng": "126.9069568"
   },
   {
     "rstrnt_id": "243854",
@@ -1004,8 +1004,8 @@
     "rstrnt_tel_no": "01040524678",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "생크림빵",
-    "rstrnt_la": "37.5810534",
-    "rstrnt_lo": "126.968428"
+    "lat": "37.5810534",
+    "lng": "126.968428"
   },
   {
     "rstrnt_id": "679",
@@ -1016,8 +1016,8 @@
     "rstrnt_tel_no": "01027860444",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "버섯가지꿔바로우,비건떡볶이,비건함박스테이크",
-    "rstrnt_la": "37.5581772",
-    "rstrnt_lo": "126.934464"
+    "lat": "37.5581772",
+    "lng": "126.934464"
   },
   {
     "rstrnt_id": "260013",
@@ -1028,8 +1028,8 @@
     "rstrnt_tel_no": "01065578861",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "모카포트 커피,비건디저트",
-    "rstrnt_la": "37.667852",
-    "rstrnt_lo": "126.7717286"
+    "lat": "37.667852",
+    "lng": "126.7717286"
   },
   {
     "rstrnt_id": "272485",
@@ -1040,8 +1040,8 @@
     "rstrnt_tel_no": "01094699022",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "901샐러드,비건베이킹,비건브런치,비건요거트,스무디보울,에너지비건수프",
-    "rstrnt_la": "33.4530482",
-    "rstrnt_lo": "126.4862642"
+    "lat": "33.4530482",
+    "lng": "126.4862642"
   },
   {
     "rstrnt_id": "275515",
@@ -1052,8 +1052,8 @@
     "rstrnt_tel_no": "0324318011",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "고구마빵,단팥빵,단호박식빵,딸기생크림,마늘바게트식빵,망고식빵,먹물식빵,메이플식빵,모두식빵,밤식빵,블루베리식빵,쇼콜라식빵,야채식빵,어니언햄치즈식빵,치즈식빵,크림치즈식빵,호밀식빵",
-    "rstrnt_la": "37.4532215",
-    "rstrnt_lo": "126.7077199"
+    "lat": "37.4532215",
+    "lng": "126.7077199"
   },
   {
     "rstrnt_id": "281222",
@@ -1064,8 +1064,8 @@
     "rstrnt_tel_no": "0322090172",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "국화차,드립머신커피,모과차,안동소주칵테일,오미자차,우엉차,유자청떡구이,초코라떼,핸드드립커피",
-    "rstrnt_la": "37.4487557",
-    "rstrnt_lo": "126.666979"
+    "lat": "37.4487557",
+    "lng": "126.666979"
   },
   {
     "rstrnt_id": "968511",
@@ -1076,8 +1076,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "돌체라떼,바닐라라떼,수제 고구마라떼,수제 비건요거트,수제 비건쿠키,아메리카노",
-    "rstrnt_la": "35.6370709",
-    "rstrnt_lo": "127.964477"
+    "lat": "35.6370709",
+    "lng": "127.964477"
   },
   {
     "rstrnt_id": "968675",
@@ -1088,8 +1088,8 @@
     "rstrnt_tel_no": "01173833303",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "아메리카노",
-    "rstrnt_la": "37.4482386",
-    "rstrnt_lo": "126.6952686"
+    "lat": "37.4482386",
+    "lng": "126.6952686"
   },
   {
     "rstrnt_id": "306213",
@@ -1100,8 +1100,8 @@
     "rstrnt_tel_no": "07075438101",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "고추장 언리미트 두루치기,드렁큰비건 시그니쳐 소주,비건 라자냐,스페셜 누룽지탕,칠리새우(모양),후라이드 컬리플라워",
-    "rstrnt_la": "37.5541552",
-    "rstrnt_lo": "126.9299687"
+    "lat": "37.5541552",
+    "lng": "126.9299687"
   },
   {
     "rstrnt_id": "307470",
@@ -1112,8 +1112,8 @@
     "rstrnt_tel_no": "01055589328",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "덤불덮밥(간장/고추장),이불덮밥(된장/고추장),토마토함박스테이크세트",
-    "rstrnt_la": "37.5589134",
-    "rstrnt_lo": "126.9430611"
+    "lat": "37.5589134",
+    "lng": "126.9430611"
   },
   {
     "rstrnt_id": "315847",
@@ -1124,8 +1124,8 @@
     "rstrnt_tel_no": "01049158034",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "꽃빵&고추잡채,나랑샐러드,매실찹쌀탕수,바삭느타리튀김,버섯누룽지탕,버섯샐러드,뷔페 서비스(35인 이상),스페셜 볶음 쌀국수,아보카도롤,연차림(4인 이상),유자샐러드,채이장,콩고기버섯",
-    "rstrnt_la": "35.6372817",
-    "rstrnt_lo": "127.9640528"
+    "lat": "35.6372817",
+    "lng": "127.9640528"
   },
   {
     "rstrnt_id": "325155",
@@ -1136,8 +1136,8 @@
     "rstrnt_tel_no": "0216441803",
     "resve_posbl_at": "Y",
     "sle_vgtr_menu_info_dc": "도시락,요리코스 A ( 평일점심만, 4인이상 ),요리코스 B ( 평일,주말,휴일 3인이상 ),요리코스 C ( 평일,주말,휴일 3인이상 ),점심식사,점심특선",
-    "rstrnt_la": "37.476295",
-    "rstrnt_lo": "127.0427131"
+    "lat": "37.476295",
+    "lng": "127.0427131"
   },
   {
     "rstrnt_id": "332101",
@@ -1148,8 +1148,8 @@
     "rstrnt_tel_no": "023360866",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "낙지별밥",
-    "rstrnt_la": "37.5687928",
-    "rstrnt_lo": "126.9302286"
+    "lat": "37.5687928",
+    "lng": "126.9302286"
   },
   {
     "rstrnt_id": "334132",
@@ -1160,8 +1160,8 @@
     "rstrnt_tel_no": "01024274288",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "비건 스콘(채식 스콘)",
-    "rstrnt_la": "36.7714715",
-    "rstrnt_lo": "127.129043"
+    "lat": "36.7714715",
+    "lng": "127.129043"
   },
   {
     "rstrnt_id": "335197",
@@ -1172,8 +1172,8 @@
     "rstrnt_tel_no": "0547720014",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "자연채식뷔페",
-    "rstrnt_la": "35.7823682",
-    "rstrnt_lo": "129.3256272"
+    "lat": "35.7823682",
+    "lng": "129.3256272"
   },
   {
     "rstrnt_id": "363003",
@@ -1184,8 +1184,8 @@
     "rstrnt_tel_no": "027497057",
     "resve_posbl_at": "Y",
     "sle_vgtr_menu_info_dc": "꿍빠오 두부 덮밥,라구 파스타,멕시칸 칠리 버거,버섯크림 파스타,비건 타코 랩,비건키친 넛누들,참나물페스토 파스타,크리미 칙피 카레,후라이드 템페",
-    "rstrnt_la": "37.5736979",
-    "rstrnt_lo": "126.9361675"
+    "lat": "37.5736979",
+    "lng": "126.9361675"
   },
   {
     "rstrnt_id": "982477",
@@ -1196,8 +1196,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "Y",
     "sle_vgtr_menu_info_dc": "내 마음을 알아주는 내맘피자,살몬 컬리라이스 볼,소이미트 크런치 볼,언트레디셔널 치즈 피자,캘리포니아 선샤인,튜나 타다끼 컬리라이스 볼,포켓 화이타",
-    "rstrnt_la": "35.8777043",
-    "rstrnt_lo": "128.6291671"
+    "lat": "35.8777043",
+    "lng": "128.6291671"
   },
   {
     "rstrnt_id": "370039",
@@ -1208,8 +1208,8 @@
     "rstrnt_tel_no": "01030759317",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "딸기라떼,레몬에이드,마카다미아 쿠키,모과 얼그레이 티,무화과스콘,베리 리치 주스,살구 쿠키,쑥라떼,아메리카노,아몬드쿠키,오트베리스무디,차이티라떼,초코아몬드쿠키,초코칩 쿠키,타르트,",
-    "rstrnt_la": "35.273352",
-    "rstrnt_lo": "128.3975883"
+    "lat": "35.273352",
+    "lng": "128.3975883"
   },
   {
     "rstrnt_id": "396860",
@@ -1220,8 +1220,8 @@
     "rstrnt_tel_no": "024570102",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "ARAMIS 와인(병),MADIRAN 와인(병),녹즙 아침 진지,생강차,생과일 쥬스,생채식 진지,아티커피,오행현미죽 진지,유기농사과즙, 유기농포도즙,함씨네 토종콩물",
-    "rstrnt_la": "37.5359253",
-    "rstrnt_lo": "127.0920863"
+    "lat": "37.5359253",
+    "lng": "127.0920863"
   },
   {
     "rstrnt_id": "871",
@@ -1232,8 +1232,8 @@
     "rstrnt_tel_no": "01094034354",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "BEET GAZPACHO(VEGAN),HUMMUS,RATATOUILLE,SCALLOP,SHRIMP BAO(2pcs)",
-    "rstrnt_la": "37.5381203",
-    "rstrnt_lo": "127.0025674"
+    "lat": "37.5381203",
+    "lng": "127.0025674"
   },
   {
     "rstrnt_id": "992376",
@@ -1244,8 +1244,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "비건볶음짜장",
-    "rstrnt_la": "37.6132852",
-    "rstrnt_lo": "126.9162262"
+    "lat": "37.6132852",
+    "lng": "126.9162262"
   },
   {
     "rstrnt_id": "994172",
@@ -1256,8 +1256,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "FOUR SEASONS,REFRESH,VEGAN LIFE,YANGYANG POKE",
-    "rstrnt_la": "37.5259168",
-    "rstrnt_lo": "126.9283122"
+    "lat": "37.5259168",
+    "lng": "126.9283122"
   },
   {
     "rstrnt_id": "429198",
@@ -1268,8 +1268,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "글루텐프리 쌀베이글(유기농오분도미) 4300원부터~,발효빵류,유기농오분도미발효빵,자가제분앉은뱅이통밀자연발효빵류,차류/커피류,흑미찰파운드",
-    "rstrnt_la": "37.5927768",
-    "rstrnt_lo": "126.9982112"
+    "lat": "37.5927768",
+    "lng": "126.9982112"
   },
   {
     "rstrnt_id": "996105",
@@ -1280,8 +1280,8 @@
     "rstrnt_tel_no": "07076550723",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "맛있는 비건빵,아메리카노",
-    "rstrnt_la": "37.5596505",
-    "rstrnt_lo": "126.9159646"
+    "lat": "37.5596505",
+    "lng": "126.9159646"
   },
   {
     "rstrnt_id": "442382",
@@ -1292,8 +1292,8 @@
     "rstrnt_tel_no": "0269535055",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "가지가지롤,과일에이드,구운아스파라거스(아보카도)연어샐러드,두부리코타치즈 따뜻한 샐러드,아보카도 사랑해,아스카도비건롤,오브닝 연어롤,와인콜키지,왕새우튀김,채식한그릇(buddabowl",
-    "rstrnt_la": "37.5543725",
-    "rstrnt_lo": "126.9055647"
+    "lat": "37.5543725",
+    "lng": "126.9055647"
   },
   {
     "rstrnt_id": "1000270",
@@ -1304,8 +1304,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "Y",
     "sle_vgtr_menu_info_dc": "그릴드 파인애플 버거 Grilled Pineapple Burger,그릴드 파인애플 피자 Grilled Pineapple Pizza,뉴욕 치즈 케이크와 유기농 크랜베리 콩포트,두부",
-    "rstrnt_la": "37.4852809",
-    "rstrnt_lo": "127.0418104"
+    "lat": "37.4852809",
+    "lng": "127.0418104"
   },
   {
     "rstrnt_id": "452706",
@@ -1316,8 +1316,8 @@
     "rstrnt_tel_no": "07086927238",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "비건 라멘,비건 채식 햄버거,수제 콜라",
-    "rstrnt_la": "35.1709808",
-    "rstrnt_lo": "129.177663"
+    "lat": "35.1709808",
+    "lng": "129.177663"
   },
   {
     "rstrnt_id": "455674",
@@ -1328,8 +1328,8 @@
     "rstrnt_tel_no": "07088227771",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "PP DRINK - 레몬에이드,PP DRINK - 아메리카노,PP DRINK - 아이스아메리카노,PP DRINK - 자몽에이드,PP ENERGY - 그린애플치아씨드,PP ENERG",
-    "rstrnt_la": "37.5062774",
-    "rstrnt_lo": "127.0993879"
+    "lat": "37.5062774",
+    "lng": "127.0993879"
   },
   {
     "rstrnt_id": "1002558",
@@ -1340,8 +1340,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "four season s,REFRESH,STRESS RELEASE,YANGYANG POKE",
-    "rstrnt_la": "37.5297718",
-    "rstrnt_lo": "126.9647415"
+    "lat": "37.5297718",
+    "lng": "126.9647415"
   },
   {
     "rstrnt_id": "1004129",
@@ -1352,8 +1352,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "녹차,더치커피,둥굴레몬에이드,드립커피,비건케이크,스위트카페오레",
-    "rstrnt_la": "37.5495888",
-    "rstrnt_lo": "127.0537606"
+    "lat": "37.5495888",
+    "lng": "127.0537606"
   },
   {
     "rstrnt_id": "1008617",
@@ -1364,8 +1364,8 @@
     "rstrnt_tel_no": "",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "녹차빙수,도시락포장,두유,들깨탕,로즈마리,말차라떼,블루베리 빙수,비건쌀빵,소이라떼,수제대추차,수제모과차,수제생강차,수제유자차,스폐셜티 아메리카노,아이스티(복숭아,레몬),채개장,초코",
-    "rstrnt_la": "35.1951127",
-    "rstrnt_lo": "128.566555"
+    "lat": "35.1951127",
+    "lng": "128.566555"
   },
   {
     "rstrnt_id": "481127",
@@ -1376,8 +1376,8 @@
     "rstrnt_tel_no": "0313655161",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "김치류,샐러드",
-    "rstrnt_la": "37.3542209",
-    "rstrnt_lo": "126.7389689"
+    "lat": "37.3542209",
+    "lng": "126.7389689"
   },
   {
     "rstrnt_id": "489345",
@@ -1388,8 +1388,8 @@
     "rstrnt_tel_no": "01046993179",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "비건채식풀코스",
-    "rstrnt_la": "33.5116944",
-    "rstrnt_lo": "126.7059002"
+    "lat": "33.5116944",
+    "lng": "126.7059002"
   },
   {
     "rstrnt_id": "491597",
@@ -1400,8 +1400,8 @@
     "rstrnt_tel_no": "01076141518",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "오렌지에이드,직접볶아내린라떼,직접볶아내린커피,청포도케일쥬스,토마토쥬스",
-    "rstrnt_la": "35.8877349",
-    "rstrnt_lo": "128.6163751"
+    "lat": "35.8877349",
+    "lng": "128.6163751"
   },
   {
     "rstrnt_id": "525849",
@@ -1412,7 +1412,7 @@
     "rstrnt_tel_no": "0632248929",
     "resve_posbl_at": "N",
     "sle_vgtr_menu_info_dc": "도시락 포장,비건뷔페(중학생이상),비건뷔페(초등학생),책식뷔페",
-    "rstrnt_la": "35.8317602",
-    "rstrnt_lo": "127.1184157"
+    "lat": "35.8317602",
+    "lng": "127.1184157"
   }
 ]

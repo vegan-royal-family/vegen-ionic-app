@@ -1,5 +1,5 @@
 import "./style/style.scss";
-import { IonContent, IonPage, IonFabButton, IonFab } from "@ionic/react";
+import { IonContent, IonPage, IonFabButton } from "@ionic/react";
 import { useState } from "react";
 import styled from "@emotion/styled";
 import Icon from "components/common/Icon";
@@ -8,6 +8,7 @@ import useKakaoMap from "./hook/useKakaoMap";
 import SearchModal from "./component/SearchModal";
 import FilterField from "./component/FilterField";
 import { Swiper, SwiperSlide } from "swiper/react";
+import data from "mock/restaurant.json";
 
 import "swiper/swiper.min.css";
 import "@ionic/react/css/ionic-swiper.css";
@@ -20,15 +21,12 @@ const TopContentWrapper = styled.div`
 `;
 
 const SliderWrapper = styled.div`
+  position: relative;
   width: 100%;
   position: absolute;
   z-index: 20000;
-  bottom: 96px;
+  bottom: 100px;
   padding-left: 20px;
-  .swiper-slide {
-    width: calc(100% - 20px) !important;
-    height: 240px;
-  }
 `;
 
 const SliderCard = styled.div`
@@ -40,11 +38,11 @@ const SliderCard = styled.div`
 `;
 
 const Restaurant: React.FC = () => {
-  const { setCurrentPosition, zoomIn } = useKakaoMap([]);
+  const { setCurrentPosition, zoomIn } = useKakaoMap(data);
   const [openSearchModal, setOpenSearchModal] = useState<boolean>(false);
 
   return (
-    <IonPage>
+    <IonPage id="restaurant-page">
       <IonContent>
         <BottomModal />
         <SearchModal
@@ -57,15 +55,15 @@ const Restaurant: React.FC = () => {
             openSearchModal={() => setOpenSearchModal(true)}
           />
         </TopContentWrapper>
-        <IonFab slot="fixed" vertical="center" horizontal="end">
-          <IonFabButton onClick={() => setCurrentPosition()}>
-            <Icon icon="aiming" />
-          </IonFabButton>
-          <IonFabButton onClick={() => zoomIn()}>
-            <Icon icon="plus" />
-          </IonFabButton>
-        </IonFab>
         <SliderWrapper>
+          <div className="fab-btn-group">
+            <IonFabButton onClick={() => setCurrentPosition()}>
+              <Icon icon="aiming" />
+            </IonFabButton>
+            <IonFabButton onClick={() => zoomIn()}>
+              <Icon icon="plus" />
+            </IonFabButton>
+          </div>
           <Swiper slidesPerView="auto" spaceBetween={8}>
             <SwiperSlide>
               <SliderCard>Slide 1</SliderCard>
