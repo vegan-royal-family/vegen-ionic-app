@@ -18,7 +18,11 @@ const INIT_CENTER_LNG = 126.934464;
 
 function useKakaoMap(data: Array<PositionDataType>) {
   const [map, setMap] = useState<any | null>(null);
-  const [markers, setMarkers] = useState<Array<PositionDataType>>([]);
+  const [markers, setMarkers] = useState<Array<any>>([]);
+  const [dragendHandler, setDragendHandler] = useState(null);
+  const [zoomHandler, setZoomHandler] = useState(null);
+
+  const imgSrc = "/assets/icon/marker_default.svg";
 
   const setCurrentPosition = async () => {
     if (!map) {
@@ -28,6 +32,7 @@ function useKakaoMap(data: Array<PositionDataType>) {
     const lat = coordinates?.coords?.latitude;
     const lng = coordinates?.coords?.longitude;
     // TODO: 실제 기기에서 테스트 필요 (android, ios)
+    // Android 기기 테스트 완료
     map.setCenter(new window.kakao.maps.LatLng(lat, lng));
   };
 
@@ -37,6 +42,35 @@ function useKakaoMap(data: Array<PositionDataType>) {
     }
     const level = map.getLevel();
     map.setLevel(level - 1);
+  };
+
+  const updateRenderMarkers = () => {
+    const imgSize = new window.kakao.maps.Size(32, 32);
+    const markerImage = new window.kakao.maps.MarkerImage(imgSrc, imgSize);
+
+    for (let index = 0; index < markers.length; index++) {
+      const marker = markers[index];
+      marker.setMap(null);
+    }
+
+    const { ha, oa, qa, pa } = map.getBounds();
+    const sw = [qa, ha];
+    const ne = [pa, oa];
+
+    const markerList = [];
+    for (let index = 0; index < data.length; index++) {
+      // TODO: 현재 뷰포트 바운드 안에 들어가는 마커 객체 생성
+      //   const marker = new window.kakao.maps.Marker({
+      //     map: map,
+      //     position: new window.kakao.maps.LatLng(
+      //       parseFloat(data[index].lat),
+      //       parseFloat(data[index].lng)
+      //     ),
+      //     image: markerImage,
+      //   });
+      //   markerList.push(marker);
+    }
+    //setMarkers(markerList);
   };
 
   useIonViewDidEnter(() => {
@@ -51,33 +85,11 @@ function useKakaoMap(data: Array<PositionDataType>) {
   // 지도 첫 렌더링 시 한번 실행
   useEffect(() => {
     if (map) {
-      /**
-       * TODO
-       * 필요 시, "dragend", "zoom_changed" 이벤트 리스너를
-       * 등록하여 현재 viewport에 포함되는 마커만 렌더링하는 로직 구현
-       */
-
-      const imgSrc = "/assets/icon/marker_default.svg";
-      const imgSize = new window.kakao.maps.Size(32, 32);
-      const markerImage = new window.kakao.maps.MarkerImage(imgSrc, imgSize);
-
-      const markerList = [];
-      for (let index = 0; index < data.length; index++) {
-        const marker = new window.kakao.maps.Marker({
-          map: map,
-          position: new window.kakao.maps.LatLng(
-            parseFloat(data[index].lat),
-            parseFloat(data[index].lng)
-          ),
-          image: markerImage,
-        });
-        markerList.push(marker);
-      }
-      setMarkers(markerList);
+      window.kakao.maps.event.addListener(map, "idle", updateRenderMarkers);
     }
   }, [map, data]);
 
-  return { setCurrentPosition, zoomIn };
+  return { markers, setCurrentPosition, zoomIn };
 }
 
 export default useKakaoMap;
