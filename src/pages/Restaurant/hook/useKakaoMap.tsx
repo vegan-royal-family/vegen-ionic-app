@@ -9,6 +9,7 @@ declare global {
 }
 
 type PositionDataType = {
+  id: string;
   lat: string;
   lng: string;
 };
@@ -18,9 +19,8 @@ const INIT_CENTER_LNG = 126.934464;
 
 function useKakaoMap(data: Array<PositionDataType>) {
   const [map, setMap] = useState<any | null>(null);
-  const [markers, setMarkers] = useState<Array<any>>([]);
-  const [dragendHandler, setDragendHandler] = useState(null);
-  const [zoomHandler, setZoomHandler] = useState(null);
+  const [markerDatas, setMarkerDatas] = useState<Array<any>>([]);
+  const markerMap = new Map();
 
   const imgSrc = "/assets/icon/marker_default.svg";
 
@@ -48,29 +48,37 @@ function useKakaoMap(data: Array<PositionDataType>) {
     const imgSize = new window.kakao.maps.Size(32, 32);
     const markerImage = new window.kakao.maps.MarkerImage(imgSrc, imgSize);
 
-    for (let index = 0; index < markers.length; index++) {
-      const marker = markers[index];
-      marker.setMap(null);
-    }
+    markerMap.forEach((item) => item.setMap(null));
+    markerMap.clear();
 
-    const { ha, oa, qa, pa } = map.getBounds();
-    const sw = [qa, ha];
-    const ne = [pa, oa];
+    const { ha: swlng, oa: nelng, qa: swlat, pa: nelat } = map.getBounds();
 
-    const markerList = [];
+    const newMarkers = [];
     for (let index = 0; index < data.length; index++) {
-      // TODO: 현재 뷰포트 바운드 안에 들어가는 마커 객체 생성
-      //   const marker = new window.kakao.maps.Marker({
-      //     map: map,
-      //     position: new window.kakao.maps.LatLng(
-      //       parseFloat(data[index].lat),
-      //       parseFloat(data[index].lng)
-      //     ),
-      //     image: markerImage,
-      //   });
-      //   markerList.push(marker);
+      const markerBounds = [
+        parseFloat(data[index].lat),
+        parseFloat(data[index].lng),
+      ];
+
+      if (
+        swlat < markerBounds[0] &&
+        markerBounds[0] < nelat &&
+        swlng < markerBounds[1] &&
+        markerBounds[1] < nelng
+      ) {
+        const marker = new window.kakao.maps.Marker({
+          map: map,
+          position: new window.kakao.maps.LatLng(
+            parseFloat(data[index].lat),
+            parseFloat(data[index].lng)
+          ),
+          image: markerImage,
+        });
+        markerMap.set(data[index].id, marker);
+        newMarkers.push(data[index]);
+      }
     }
-    //setMarkers(markerList);
+    setMarkerDatas(newMarkers);
   };
 
   useIonViewDidEnter(() => {
@@ -89,7 +97,7 @@ function useKakaoMap(data: Array<PositionDataType>) {
     }
   }, [map, data]);
 
-  return { markers, setCurrentPosition, zoomIn };
+  return { markerDatas, setCurrentPosition, zoomIn };
 }
 
 export default useKakaoMap;
