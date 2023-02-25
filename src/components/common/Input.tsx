@@ -75,10 +75,12 @@ export default function Input({
 
   // TODO: focus가 잡힐 때도 있고 안 잡힐 때도 있음. 문제 해결 필요
   useEffect(() => {
-    if (autoFocus && inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [inputRef, autoFocus]);
+    setTimeout(() => {
+      if (inputRef.current) {
+        inputRef.current.focus();
+      }
+    }, 500);
+  }, [autoFocus]);
 
   return (
     <LabelField disabled={disabled}>

@@ -14,7 +14,7 @@ const BottomModal = () => {
       ref={modalRef}
       isOpen={true}
       initialBreakpoint={initialBreakPoint}
-      breakpoints={[initialBreakPoint, 1]}
+      breakpoints={[initialBreakPoint, 0.98]}
       backdropDismiss={false}
       backdropBreakpoint={0.8}
     >

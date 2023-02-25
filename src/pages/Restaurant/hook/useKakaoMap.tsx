@@ -53,7 +53,7 @@ function useKakaoMap(data: Array<PositionDataType>) {
 
     const { ha: swlng, oa: nelng, qa: swlat, pa: nelat } = map.getBounds();
 
-    const newMarkers = [];
+    const newMarkerDatas = [];
     for (let index = 0; index < data.length; index++) {
       const markerBounds = [
         parseFloat(data[index].lat),
@@ -75,10 +75,10 @@ function useKakaoMap(data: Array<PositionDataType>) {
           image: markerImage,
         });
         markerMap.set(data[index].id, marker);
-        newMarkers.push(data[index]);
+        newMarkerDatas.push(data[index]);
       }
     }
-    setMarkerDatas(newMarkers);
+    setMarkerDatas(newMarkerDatas);
   };
 
   useIonViewDidEnter(() => {
@@ -92,7 +92,9 @@ function useKakaoMap(data: Array<PositionDataType>) {
 
   // 지도 첫 렌더링 시 한번 실행
   useEffect(() => {
-    if (map) {
+    if (map && data.length > 0) {
+      console.log("???");
+      updateRenderMarkers();
       window.kakao.maps.event.addListener(map, "idle", updateRenderMarkers);
     }
   }, [map, data]);

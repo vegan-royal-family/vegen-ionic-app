@@ -38,7 +38,7 @@ const SliderCard = styled.div`
 `;
 
 const Restaurant: React.FC = () => {
-  const { setCurrentPosition, zoomIn } = useKakaoMap(data);
+  const { markerDatas, setCurrentPosition, zoomIn } = useKakaoMap(data);
   const [openSearchModal, setOpenSearchModal] = useState<boolean>(false);
 
   return (
@@ -65,15 +65,15 @@ const Restaurant: React.FC = () => {
             </IonFabButton>
           </div>
           <Swiper slidesPerView="auto" spaceBetween={8}>
-            <SwiperSlide>
-              <SliderCard>Slide 1</SliderCard>
-            </SwiperSlide>
-            <SwiperSlide>
-              <SliderCard>Slide 2</SliderCard>
-            </SwiperSlide>
-            <SwiperSlide>
-              <SliderCard>Slide 3</SliderCard>
-            </SwiperSlide>
+            {markerDatas.map((item, index) => {
+              return (
+                <SwiperSlide key={item.id}>
+                  <SliderCard>
+                    식당 no.{item.id} ({index + 1})
+                  </SliderCard>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </SliderWrapper>
         <div id="map" style={{ width: "100%", height: "100%" }}></div>

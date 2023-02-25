@@ -43,6 +43,8 @@
 
 #main-bottom-modal {
   --border-radius: 16px;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
   ion-content {
     --padding-top: 24px;
     --padding-start: 20px;
