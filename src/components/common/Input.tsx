@@ -59,11 +59,10 @@ export default function Input({
   onPrefixIconClick,
   suffixIcon,
   onSuffixIconClick,
-  autoFocus,
   ...props
 }: InputPropsType): ReactElement {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [isFocused, setIsFocused] = useState(autoFocus);
+  const [isFocused, setIsFocused] = useState(false);
 
   let inputClassName = `${className ?? ""}`;
   if (disabled) {
@@ -72,15 +71,6 @@ export default function Input({
   if (isFocused) {
     inputClassName += " focused-input";
   }
-
-  // TODO: focus가 잡힐 때도 있고 안 잡힐 때도 있음. 문제 해결 필요
-  useEffect(() => {
-    setTimeout(() => {
-      if (inputRef.current) {
-        inputRef.current.focus();
-      }
-    }, 500);
-  }, [autoFocus]);
 
   return (
     <LabelField disabled={disabled}>

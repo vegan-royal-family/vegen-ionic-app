@@ -5,7 +5,6 @@ import {
   IonToolbar,
   IonContent,
   IonText,
-  IonButton,
 } from "@ionic/react";
 import TextButton from "components/common/TextButton";
 import { useRef } from "react";
@@ -46,6 +45,17 @@ const SearchModal = ({
   closeSearchModal: Function;
 }) => {
   const modalRef = useRef<HTMLIonModalElement>(null);
+
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     setTimeout(() => {
+  //       const inputElement = document.getElementById("search-modal-input");
+  //       if (inputElement) {
+  //         inputElement.focus();
+  //       }
+  //     }, 500);
+  //   }
+  // }, [isOpen]);
 
   return (
     <IonModal id="search-modal" ref={modalRef} isOpen={isOpen}>

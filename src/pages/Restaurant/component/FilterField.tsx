@@ -40,7 +40,7 @@ const FilterField = ({
       return (
         <SearchField className="map-search-field">
           <Input
-            autoFocus={true}
+            id="search-modal-input"
             className="search-input"
             placeholder="채식식당을 검색해주세요!"
             prefixIcon="left"
@@ -52,6 +52,7 @@ const FilterField = ({
       return (
         <SearchField className="map-search-field">
           <Input
+            id="map-input"
             className="search-input"
             placeholder="채식식당을 검색해주세요!"
           />

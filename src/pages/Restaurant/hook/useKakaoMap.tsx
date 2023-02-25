@@ -93,7 +93,6 @@ function useKakaoMap(data: Array<PositionDataType>) {
   // 지도 첫 렌더링 시 한번 실행
   useEffect(() => {
     if (map && data.length > 0) {
-      console.log("???");
       updateRenderMarkers();
       window.kakao.maps.event.addListener(map, "idle", updateRenderMarkers);
     }
