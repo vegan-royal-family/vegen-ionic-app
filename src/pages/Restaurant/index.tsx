@@ -38,8 +38,11 @@ const SliderCard = styled.div`
 `;
 
 const Restaurant: React.FC = () => {
-  const { markerDatas, setCurrentPosition, zoomIn } = useKakaoMap(data);
   const [openSearchModal, setOpenSearchModal] = useState<boolean>(false);
+  const { markerDatas, setCurrentPosition, zoomIn } = useKakaoMap(
+    data,
+    openSearchModal
+  );
 
   return (
     <IonPage id="restaurant-page">

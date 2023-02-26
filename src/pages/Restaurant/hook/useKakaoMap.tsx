@@ -1,5 +1,5 @@
 import { useIonViewDidEnter } from "@ionic/react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Geolocation } from "@capacitor/geolocation";
 
 declare global {
@@ -17,7 +17,7 @@ type PositionDataType = {
 const INIT_CENTER_LAT = 37.5581772;
 const INIT_CENTER_LNG = 126.934464;
 
-function useKakaoMap(data: Array<PositionDataType>) {
+function useKakaoMap(data: Array<PositionDataType>, isSearchOpen: boolean) {
   const [map, setMap] = useState<any | null>(null);
   const [markerDatas, setMarkerDatas] = useState<Array<any>>([]);
   const markerMap = new Map();
@@ -44,7 +44,8 @@ function useKakaoMap(data: Array<PositionDataType>) {
     map.setLevel(level - 1);
   };
 
-  const updateRenderMarkers = () => {
+  const updateRenderMarkers = useCallback(() => {
+    //console.log("idle event!!");
     const imgSize = new window.kakao.maps.Size(32, 32);
     const markerImage = new window.kakao.maps.MarkerImage(imgSrc, imgSize);
 
@@ -79,7 +80,7 @@ function useKakaoMap(data: Array<PositionDataType>) {
       }
     }
     setMarkerDatas(newMarkerDatas);
-  };
+  }, [map]);
 
   useIonViewDidEnter(() => {
     const container = document.getElementById("map");
@@ -87,16 +88,25 @@ function useKakaoMap(data: Array<PositionDataType>) {
       center: new window.kakao.maps.LatLng(INIT_CENTER_LAT, INIT_CENTER_LNG),
       level: 3,
     };
-    setMap(new window.kakao.maps.Map(container, options));
+    const map = new window.kakao.maps.Map(container, options);
+    setMap(map);
   });
 
   // 지도 첫 렌더링 시 한번 실행
   useEffect(() => {
     if (map && data.length > 0) {
-      updateRenderMarkers();
-      window.kakao.maps.event.addListener(map, "idle", updateRenderMarkers);
+      if (!isSearchOpen) {
+        updateRenderMarkers();
+        window.kakao.maps.event.addListener(map, "idle", updateRenderMarkers);
+      } else {
+        window.kakao.maps.event.removeListener(
+          map,
+          "idle",
+          updateRenderMarkers
+        );
+      }
     }
-  }, [map, data]);
+  }, [map, data, isSearchOpen]);
 
   return { markerDatas, setCurrentPosition, zoomIn };
 }

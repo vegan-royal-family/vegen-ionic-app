@@ -7,7 +7,7 @@ import {
   IonText,
 } from "@ionic/react";
 import TextButton from "components/common/TextButton";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import theme from "styles/theme";
 import FilterField from "./FilterField";
 
@@ -46,16 +46,16 @@ const SearchModal = ({
 }) => {
   const modalRef = useRef<HTMLIonModalElement>(null);
 
-  // useEffect(() => {
-  //   if (isOpen) {
-  //     setTimeout(() => {
-  //       const inputElement = document.getElementById("search-modal-input");
-  //       if (inputElement) {
-  //         inputElement.focus();
-  //       }
-  //     }, 500);
-  //   }
-  // }, [isOpen]);
+  useEffect(() => {
+    if (isOpen) {
+      setTimeout(() => {
+        const inputElement = document.getElementById("search-modal-input");
+        if (inputElement) {
+          inputElement.focus();
+        }
+      }, 500);
+    }
+  }, [isOpen]);
 
   return (
     <IonModal id="search-modal" ref={modalRef} isOpen={isOpen}>
