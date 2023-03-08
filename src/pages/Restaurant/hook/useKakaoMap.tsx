@@ -20,9 +20,20 @@ const INIT_CENTER_LNG = 126.934464;
 function useKakaoMap(data: Array<PositionDataType>, isSearchOpen: boolean) {
   const [map, setMap] = useState<any | null>(null);
   const [markerDatas, setMarkerDatas] = useState<Array<any>>([]);
-  const markerMap = new Map();
+  const markerMap = new Map<string, any>();
+  let selectedMarkerKey: string | null = null;
 
-  const imgSrc = "/assets/icon/marker_default.svg";
+  const imgSize = new window.kakao.maps.Size(32, 32);
+  const defaultImgSrc = "/assets/icon/marker_default.svg";
+  const activeImgSrc = "/assets/icon/marker_active.svg";
+  const defaultMarkerImage = new window.kakao.maps.MarkerImage(
+    defaultImgSrc,
+    imgSize
+  );
+  const activeMarkerImage = new window.kakao.maps.MarkerImage(
+    activeImgSrc,
+    imgSize
+  );
 
   const setCurrentPosition = async () => {
     if (!map) {
@@ -45,10 +56,6 @@ function useKakaoMap(data: Array<PositionDataType>, isSearchOpen: boolean) {
   };
 
   const updateRenderMarkers = useCallback(() => {
-    //console.log("idle event!!");
-    const imgSize = new window.kakao.maps.Size(32, 32);
-    const markerImage = new window.kakao.maps.MarkerImage(imgSrc, imgSize);
-
     markerMap.forEach((item) => item.setMap(null));
     markerMap.clear();
 
@@ -73,14 +80,37 @@ function useKakaoMap(data: Array<PositionDataType>, isSearchOpen: boolean) {
             parseFloat(data[index].lat),
             parseFloat(data[index].lng)
           ),
-          image: markerImage,
+          image: defaultMarkerImage,
+          clickable: true,
         });
+        window.kakao.maps.event.addListener(marker, "click", () =>
+          onMarkerClicked(marker, data[index].id)
+        );
+
+        const isSelectedMarker = data[index].id === selectedMarkerKey;
+        if (isSelectedMarker) {
+          marker.setImage(activeMarkerImage);
+        }
         markerMap.set(data[index].id, marker);
         newMarkerDatas.push(data[index]);
       }
     }
     setMarkerDatas(newMarkerDatas);
   }, [map]);
+
+  const onMarkerClicked = (marker: any, markerKey: string) => {
+    if (selectedMarkerKey) {
+      const beforeSelectedItem = markerMap.get(selectedMarkerKey);
+      if (beforeSelectedItem) {
+        beforeSelectedItem.setImage(defaultMarkerImage);
+      }
+    }
+    marker.setImage(activeMarkerImage);
+    selectedMarkerKey = markerKey;
+
+    const { La, Ma } = marker.getPosition();
+    map.setCenter(new window.kakao.maps.LatLng(Ma, La));
+  };
 
   useIonViewDidEnter(() => {
     const container = document.getElementById("map");
