@@ -17,7 +17,7 @@ const SliderCard = styled.div`
 const RestaurantCard = ({ item, index }: { item: any; index: number }) => {
   return (
     <SliderCard>
-      식당 no.{item.id} ({index + 1})
+      식당 no.{item?.id} ({index + 1})
     </SliderCard>
   );
 };
@@ -25,14 +25,17 @@ const RestaurantCard = ({ item, index }: { item: any; index: number }) => {
 const RestaurantSlider = ({
   viewportMarkerDatas,
   activeMarkerKey,
+  changeActiveMarker,
 }: {
   viewportMarkerDatas: Array<any>;
   activeMarkerKey: string | null;
+  changeActiveMarker: Function;
 }) => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
-  const activeCardItem = viewportMarkerDatas.filter(
-    (item) => item.id === activeMarkerKey
-  )[0];
+  const newViewportMarkerDatas = [
+    ...viewportMarkerDatas.filter((item) => item.id === activeMarkerKey),
+    ...viewportMarkerDatas.filter((item) => item.id !== activeMarkerKey),
+  ];
 
   useEffect(() => {
     if (swiper && !swiper.destroyed) {
@@ -42,15 +45,23 @@ const RestaurantSlider = ({
   }, [activeMarkerKey]);
 
   return (
-    <Swiper slidesPerView="auto" spaceBetween={8} onSwiper={setSwiper}>
-      {activeCardItem && (
-        <SwiperSlide key={activeCardItem.id}>
-          <RestaurantCard item={activeCardItem} index={0} />
-        </SwiperSlide>
-      )}
-      {viewportMarkerDatas.map((item, index) => {
+    <Swiper
+      slidesPerView="auto"
+      spaceBetween={8}
+      onSwiper={setSwiper}
+      onActiveIndexChange={(swiper) => {
+        const activeIndex = swiper.activeIndex;
+        const activeMarkerData = newViewportMarkerDatas[activeIndex];
+        changeActiveMarker(
+          newViewportMarkerDatas,
+          activeMarkerData?.marker,
+          activeMarkerData?.id
+        );
+      }}
+    >
+      {newViewportMarkerDatas.map((item, index) => {
         return (
-          <SwiperSlide key={item.id}>
+          <SwiperSlide key={item?.id}>
             <RestaurantCard item={item} index={index} />
           </SwiperSlide>
         );

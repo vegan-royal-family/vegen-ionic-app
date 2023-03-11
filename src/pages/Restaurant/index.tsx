@@ -28,11 +28,16 @@ const SliderWrapper = styled.div`
 
 const Restaurant: React.FC = () => {
   const [openSearchModal, setOpenSearchModal] = useState<boolean>(false);
-  const { viewportMarkerDatas, activeMarkerKey, setCurrentPosition, zoomIn } =
-    useKakaoMap({
-      markerDatas: allMarkerDatas,
-      openSearchModal,
-    });
+  const {
+    viewportMarkerDatas,
+    activeMarkerKey,
+    changeActiveMarker,
+    setCurrentPosition,
+    zoomIn,
+  } = useKakaoMap({
+    markerDatas: allMarkerDatas,
+    openSearchModal,
+  });
 
   return (
     <IonPage id="restaurant-page">
@@ -60,6 +65,7 @@ const Restaurant: React.FC = () => {
           <RestaurantSlider
             viewportMarkerDatas={viewportMarkerDatas}
             activeMarkerKey={activeMarkerKey}
+            changeActiveMarker={changeActiveMarker}
           />
         </SliderWrapper>
         <div id="map" style={{ width: "100%", height: "100%" }}></div>

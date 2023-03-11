@@ -12,6 +12,7 @@ type PositionDataType = {
   id: string;
   lat: string;
   lng: string;
+  marker?: any;
 };
 
 type HookParametersType = {
@@ -103,7 +104,10 @@ function useKakaoMap({ markerDatas, openSearchModal }: HookParametersType) {
           marker.setImage(activeMarkerImage);
         }
         markerMap.set(markerDatas[index].id, marker);
-        newMarkerDatas.push(markerDatas[index]);
+        newMarkerDatas.push({
+          ...markerDatas[index],
+          marker,
+        });
       }
     }
     if (!existCurActiveMarker) {
@@ -112,6 +116,26 @@ function useKakaoMap({ markerDatas, openSearchModal }: HookParametersType) {
     }
     setViewportMarkerDatas(newMarkerDatas);
   }, [map]);
+
+  const changeActiveMarker = (
+    markerDatas: Array<any>,
+    marker: any,
+    markerKey: string
+  ) => {
+    if (selectedMarkerKey) {
+      const beforeSelectedItem = markerDatas.filter(
+        (item) => item.id === selectedMarkerKey
+      )[0]?.marker;
+      if (beforeSelectedItem) {
+        beforeSelectedItem.setImage(defaultMarkerImage);
+      }
+    }
+
+    if (marker) {
+      marker.setImage(activeMarkerImage);
+      selectedMarkerKey = markerKey;
+    }
+  };
 
   const onMarkerClicked = (marker: any, markerKey: string) => {
     if (selectedMarkerKey) {
@@ -155,7 +179,13 @@ function useKakaoMap({ markerDatas, openSearchModal }: HookParametersType) {
     }
   }, [map, markerDatas, openSearchModal]);
 
-  return { viewportMarkerDatas, activeMarkerKey, setCurrentPosition, zoomIn };
+  return {
+    viewportMarkerDatas,
+    activeMarkerKey,
+    changeActiveMarker,
+    setCurrentPosition,
+    zoomIn,
+  };
 }
 
 export default useKakaoMap;
