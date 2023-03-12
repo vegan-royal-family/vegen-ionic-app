@@ -122,14 +122,11 @@ function useKakaoMap({ markerDatas, openSearchModal }: HookParametersType) {
     marker: any,
     markerKey: string
   ) => {
-    if (selectedMarkerKey) {
-      const beforeSelectedItem = markerDatas.filter(
-        (item) => item.id === selectedMarkerKey
-      )[0]?.marker;
-      if (beforeSelectedItem) {
-        beforeSelectedItem.setImage(defaultMarkerImage);
+    markerDatas.forEach((item) => {
+      if (item?.marker) {
+        item?.marker.setImage(defaultMarkerImage);
       }
-    }
+    });
 
     if (marker) {
       marker.setImage(activeMarkerImage);
@@ -138,18 +135,17 @@ function useKakaoMap({ markerDatas, openSearchModal }: HookParametersType) {
   };
 
   const onMarkerClicked = (marker: any, markerKey: string) => {
-    if (selectedMarkerKey) {
-      const beforeSelectedItem = markerMap.get(selectedMarkerKey);
-      if (beforeSelectedItem) {
-        beforeSelectedItem.setImage(defaultMarkerImage);
+    markerMap.forEach((item) => {
+      if (item) {
+        item.setImage(defaultMarkerImage);
       }
-    }
+    });
     marker.setImage(activeMarkerImage);
     selectedMarkerKey = markerKey;
     setActiveMarkerKey(markerKey);
 
-    const { La, Ma } = marker.getPosition();
-    map.setCenter(new window.kakao.maps.LatLng(Ma, La));
+    //const { La, Ma } = marker.getPosition();
+    //map.setCenter(new window.kakao.maps.LatLng(Ma, La));
   };
 
   useIonViewDidEnter(() => {
