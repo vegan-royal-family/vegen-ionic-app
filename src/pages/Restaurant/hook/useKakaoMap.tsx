@@ -1,19 +1,13 @@
 import { useIonViewDidEnter } from "@ionic/react";
 import { useState, useEffect, useCallback } from "react";
 import { Geolocation } from "@capacitor/geolocation";
+import { PositionDataType } from "types/restaurant";
 
 declare global {
   interface Window {
     kakao: any;
   }
 }
-
-type PositionDataType = {
-  id: string;
-  lat: string;
-  lng: string;
-  marker?: any;
-};
 
 type HookParametersType = {
   markerDatas: Array<PositionDataType>;
@@ -118,7 +112,7 @@ function useKakaoMap({ markerDatas, openSearchModal }: HookParametersType) {
   }, [map]);
 
   const changeActiveMarker = (
-    markerDatas: Array<any>,
+    markerDatas: Array<PositionDataType>,
     marker: any,
     markerKey: string
   ) => {

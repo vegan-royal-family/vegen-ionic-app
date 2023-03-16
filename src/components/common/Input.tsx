@@ -1,4 +1,4 @@
-import { ChangeEvent, ReactElement, useEffect, useRef, useState } from "react";
+import { ChangeEvent, ReactElement, useRef, useState } from "react";
 import styled from "@emotion/styled";
 import theme from "styles/theme";
 import Icon from "./Icon";
@@ -7,7 +7,7 @@ type InputPropsType = {
   id?: string;
   className?: string;
   value?: string;
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => any;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => Function;
   placeholder?: string;
   width?: string | number;
   height?: string | number;

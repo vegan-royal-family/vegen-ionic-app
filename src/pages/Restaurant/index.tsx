@@ -7,8 +7,8 @@ import BottomModal from "./component/BottomModal";
 import useKakaoMap from "./hook/useKakaoMap";
 import SearchModal from "./component/SearchModal";
 import FilterField from "./component/FilterField";
-import allMarkerDatas from "mock/restaurant.json";
 import RestaurantSlider from "./component/RestaurantSlider";
+import allMarkerDatas from "mock/restaurant.json";
 
 const TopContentWrapper = styled.div`
   width: 100%;

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper/types";
+import { PositionDataType } from "types/restaurant";
 
 import "swiper/swiper.min.css";
 import "@ionic/react/css/ionic-swiper.css";
@@ -14,7 +15,13 @@ const SliderCard = styled.div`
   background-color: #fff;
 `;
 
-const RestaurantCard = ({ item, index }: { item: any; index: number }) => {
+const RestaurantCard = ({
+  item,
+  index,
+}: {
+  item: PositionDataType;
+  index: number;
+}) => {
   return (
     <SliderCard>
       식당 no.{item?.id} ({index + 1})
@@ -27,7 +34,7 @@ const RestaurantSlider = ({
   activeMarkerKey,
   changeActiveMarker,
 }: {
-  viewportMarkerDatas: Array<any>;
+  viewportMarkerDatas: Array<PositionDataType>;
   activeMarkerKey: string | null;
   changeActiveMarker: Function;
 }) => {
