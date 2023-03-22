@@ -16,6 +16,8 @@ type HookParametersType = {
 
 const INIT_CENTER_LAT = 37.5581772;
 const INIT_CENTER_LNG = 126.934464;
+const DEFAULT_IMG_SRC = "/assets/icon/marker_default.svg";
+const ACTIVE_IMG_SRC = "/assets/icon/marker_active.svg";
 
 function useKakaoMap({ markerDatas, openSearchModal }: HookParametersType) {
   const [map, setMap] = useState<any | null>(null);
@@ -24,18 +26,13 @@ function useKakaoMap({ markerDatas, openSearchModal }: HookParametersType) {
   >([]);
   const [activeMarkerKey, setActiveMarkerKey] = useState<string | null>(null);
 
-  const markerMap = new Map<string, any>();
-  let selectedMarkerKey: string | null = null;
-
   const imgSize = new window.kakao.maps.Size(32, 32);
-  const defaultImgSrc = "/assets/icon/marker_default.svg";
-  const activeImgSrc = "/assets/icon/marker_active.svg";
   const defaultMarkerImage = new window.kakao.maps.MarkerImage(
-    defaultImgSrc,
+    DEFAULT_IMG_SRC,
     imgSize
   );
   const activeMarkerImage = new window.kakao.maps.MarkerImage(
-    activeImgSrc,
+    ACTIVE_IMG_SRC,
     imgSize
   );
 
@@ -59,14 +56,28 @@ function useKakaoMap({ markerDatas, openSearchModal }: HookParametersType) {
     map.setLevel(level - 1);
   };
 
-  const updateRenderMarkers = useCallback(() => {
-    markerMap.forEach((item) => item.setMap(null));
-    markerMap.clear();
+  const setAllMarkers = (map: any) => {
+    for (let index = 0; index < markerDatas.length; index++) {
+      const marker = new window.kakao.maps.Marker({
+        map: map,
+        position: new window.kakao.maps.LatLng(
+          parseFloat(markerDatas[index].lat),
+          parseFloat(markerDatas[index].lng)
+        ),
+        image: defaultMarkerImage,
+        clickable: true,
+      });
+      window.kakao.maps.event.addListener(marker, "click", () =>
+        onMarkerClicked(marker, markerDatas[index]?.id)
+      );
+      markerDatas[index].marker = marker;
+    }
+  };
 
+  const updateViewportMarkerList = useCallback(() => {
     const { ha: swlng, oa: nelng, qa: swlat, pa: nelat } = map.getBounds();
 
     const newMarkerDatas = [];
-    let existCurActiveMarker = false;
     for (let index = 0; index < markerDatas.length; index++) {
       const markerBounds = [
         parseFloat(markerDatas[index].lat),
@@ -79,67 +90,32 @@ function useKakaoMap({ markerDatas, openSearchModal }: HookParametersType) {
         swlng < markerBounds[1] &&
         markerBounds[1] < nelng
       ) {
-        const marker = new window.kakao.maps.Marker({
-          map: map,
-          position: new window.kakao.maps.LatLng(
-            parseFloat(markerDatas[index].lat),
-            parseFloat(markerDatas[index].lng)
-          ),
-          image: defaultMarkerImage,
-          clickable: true,
-        });
-        window.kakao.maps.event.addListener(marker, "click", () =>
-          onMarkerClicked(marker, markerDatas[index].id)
-        );
-
-        const isSelectedMarker = markerDatas[index].id === selectedMarkerKey;
-        if (isSelectedMarker) {
-          existCurActiveMarker = true;
-          marker.setImage(activeMarkerImage);
-        }
-        markerMap.set(markerDatas[index].id, marker);
+        const markerData = markerDatas[index];
         newMarkerDatas.push({
-          ...markerDatas[index],
-          marker,
+          ...markerData,
         });
       }
-    }
-    if (!existCurActiveMarker) {
-      selectedMarkerKey = null;
-      setActiveMarkerKey(null);
     }
     setViewportMarkerDatas(newMarkerDatas);
   }, [map]);
 
   const changeActiveMarker = (
-    markerDatas: Array<PositionDataType>,
-    marker: any,
-    markerKey: string
+    viewportMarkers: Array<PositionDataType>,
+    marker: any
   ) => {
-    markerDatas.forEach((item) => {
-      if (item?.marker) {
-        item?.marker.setImage(defaultMarkerImage);
-      }
-    });
-
+    if (viewportMarkers.length > 0) {
+      viewportMarkers.forEach((item) =>
+        item.marker.setImage(defaultMarkerImage)
+      );
+    }
     if (marker) {
       marker.setImage(activeMarkerImage);
-      selectedMarkerKey = markerKey;
     }
   };
 
   const onMarkerClicked = (marker: any, markerKey: string) => {
-    markerMap.forEach((item) => {
-      if (item) {
-        item.setImage(defaultMarkerImage);
-      }
-    });
     marker.setImage(activeMarkerImage);
-    selectedMarkerKey = markerKey;
     setActiveMarkerKey(markerKey);
-
-    //const { La, Ma } = marker.getPosition();
-    //map.setCenter(new window.kakao.maps.LatLng(Ma, La));
   };
 
   useIonViewDidEnter(() => {
@@ -150,6 +126,7 @@ function useKakaoMap({ markerDatas, openSearchModal }: HookParametersType) {
     };
     const map = new window.kakao.maps.Map(container, options);
     setMap(map);
+    setAllMarkers(map);
   });
 
   // 지도 첫 렌더링 시 한번 실행
@@ -157,17 +134,33 @@ function useKakaoMap({ markerDatas, openSearchModal }: HookParametersType) {
     if (map && markerDatas.length > 0) {
       // 검색용 Modal이 열린 경우, idle 이벤트 리스너를 삭제해주어야 키보드가 정상적으로 표시됨
       if (!openSearchModal) {
-        updateRenderMarkers();
-        window.kakao.maps.event.addListener(map, "idle", updateRenderMarkers);
+        updateViewportMarkerList();
+        window.kakao.maps.event.addListener(
+          map,
+          "idle",
+          updateViewportMarkerList
+        );
       } else {
         window.kakao.maps.event.removeListener(
           map,
           "idle",
-          updateRenderMarkers
+          updateViewportMarkerList
         );
       }
     }
   }, [map, markerDatas, openSearchModal]);
+
+  useEffect(() => {
+    if (viewportMarkerDatas.length > 0) {
+      viewportMarkerDatas.forEach((item) => {
+        if (item.id === activeMarkerKey) {
+          item.marker.setImage(activeMarkerImage);
+        } else {
+          item.marker.setImage(defaultMarkerImage);
+        }
+      });
+    }
+  }, [activeMarkerKey]);
 
   return {
     viewportMarkerDatas,

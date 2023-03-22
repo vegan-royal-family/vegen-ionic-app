@@ -59,11 +59,7 @@ const RestaurantSlider = ({
       onActiveIndexChange={(swiper) => {
         const activeIndex = swiper.activeIndex;
         const activeMarkerData = newViewportMarkerDatas[activeIndex];
-        changeActiveMarker(
-          newViewportMarkerDatas,
-          activeMarkerData?.marker,
-          activeMarkerData?.id
-        );
+        changeActiveMarker(newViewportMarkerDatas, activeMarkerData?.marker);
       }}
     >
       {newViewportMarkerDatas.map((item, index) => {
